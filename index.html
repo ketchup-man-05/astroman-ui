@@ -1,0 +1,2040 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Astroman AI — Real KP Horary Answers, Not AI Guesses</title>
+  <meta name="description" content="Ask one burning question. Astroman AI casts a real KP Prashna Kundli chart with Swiss Ephemeris math and gives you a straight YES, NO, or YES with delays. First 5 questions free." />
+  <meta name="theme-color" content="#0A0A0F" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Astroman AI — ChatGPT hallucinates. We calculate." />
+  <meta property="og:description" content="Real KP horary chart, real math, one straight answer. First 5 questions free." />
+  <meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 630'%3E%3Crect width='1200' height='630' fill='%230A0A0F'/%3E%3Ccircle cx='600' cy='315' r='150' fill='none' stroke='%23D4A24E' stroke-width='6'/%3E%3Ccircle cx='600' cy='315' r='40' fill='%23D4A24E'/%3E%3Ctext x='600' y='540' font-family='serif' font-size='64' fill='%23F0D9A8' text-anchor='middle'%3EASTROMAN AI%3C/text%3E%3C/svg%3E" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='13' fill='%230A0A0F' stroke='%23D4A24E' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='4' fill='%23D4A24E'/%3E%3C/svg%3E" />
+  
+  <!-- Tailwind CSS -->
+  
+  <!-- Google Fonts: Cormorant Garamond, Plus Jakarta Sans, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=JetBrains+Mono:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+  <style>
+/* === Plain-CSS replacement for Tailwind (no framework, works offline) === */
+/* === Minimal preflight (replaces Tailwind's reset: no underlines, no default margins) === */
+a,a:hover,a:visited,a:active,button{color:inherit;text-decoration:none!important}
+a.underline,.underline{text-decoration:underline!important}
+button{background:none;border:none;padding:0;font:inherit;color:inherit;cursor:pointer}
+h1,h2,h3,h4,p{margin:0}
+ul,ol{list-style:none;margin:0;padding:0}
+img{max-width:100%}
+/* Generated from Tailwind utilities — plain CSS, no framework. */
+@keyframes tw-ping{75%,100%{transform:scale(2);opacity:0}}
+@keyframes tw-spin{to{transform:rotate(360deg)}}
+@keyframes tw-spin-rev{to{transform:rotate(-360deg)}}
+.-top-3{top:-0.75rem}
+.absolute{position:absolute}
+.active\:scale-95:active{transform:scale(0.95)}
+.animate-ping{animation:tw-ping 1s cubic-bezier(0,0,0.2,1) infinite}
+.animate-spin-reverse{animation:tw-spin-rev 22s linear infinite}
+.animate-spin-slow{animation:tw-spin 14s linear infinite}
+.backdrop-blur-md{backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.bg-black\/80{background-color:rgba(0,0,0,0.8)}
+.bg-ember{background-color:#FF5E1A}
+.bg-ember-deep\/20{background-color:rgba(217,56,0,0.2)}
+.bg-ember\/15{background-color:rgba(255,94,26,0.15)}
+.bg-emerald-400{background-color:#34d399}
+.bg-gold{background-color:#F0D9A8}
+.bg-gold\/15{background-color:rgba(240,217,168,0.15)}
+.bg-gold\/30{background-color:rgba(240,217,168,0.3)}
+.bg-gradient-to-r{background-image:linear-gradient(to right,var(--tw-g1),var(--tw-g2,var(--tw-g3)))}
+.bg-obsidian{background-color:#120d09}
+.bg-obsidian\/90{background-color:rgba(18,13,9,0.9)}
+.bg-void{background-color:#0a0705}
+.bg-void\/65{background-color:rgba(10,7,5,0.65)}
+.bg-void\/70{background-color:rgba(10,7,5,0.7)}
+.bg-void\/75{background-color:rgba(10,7,5,0.75)}
+.bg-void\/80{background-color:rgba(10,7,5,0.8)}
+.bg-void\/85{background-color:rgba(10,7,5,0.85)}
+.bg-void\/90{background-color:rgba(10,7,5,0.9)}
+.border{border-width:1px;border-style:solid}
+.border-b{border-bottom-width:1px;border-bottom-style:solid}
+.border-ember\/30{border-color:rgba(255,94,26,0.3)}
+.border-ember\/35{border-color:rgba(255,94,26,0.35)}
+.border-ember\/40{border-color:rgba(255,94,26,0.4)}
+.border-ember\/50{border-color:rgba(255,94,26,0.5)}
+.border-gold\/10{border-color:rgba(240,217,168,0.1)}
+.border-gold\/15{border-color:rgba(240,217,168,0.15)}
+.border-gold\/20{border-color:rgba(240,217,168,0.2)}
+.border-gold\/25{border-color:rgba(240,217,168,0.25)}
+.border-gold\/30{border-color:rgba(240,217,168,0.3)}
+.border-gold\/40{border-color:rgba(240,217,168,0.4)}
+.border-t{border-top-width:1px;border-top-style:solid}
+.cursor-pointer{cursor:pointer}
+.decoration-dotted{text-decoration-style:dotted}
+.divide-gold\/10>*+*{border-color:rgba(240,217,168,0.1)}
+.divide-y>*+*{border-top-width:1px;border-top-style:solid}
+.duration-300{transition-duration:300ms}
+.duration-500{transition-duration:500ms}
+.fixed{position:fixed}
+.flex{display:flex}
+.flex-1{flex:1 1 0%}
+.flex-col{flex-direction:column}
+.flex-wrap{flex-wrap:wrap}
+.focus\:outline-none:focus{outline:none}
+.font-bold{font-weight:700}
+.font-medium{font-weight:500}
+.font-mono{font-family:"JetBrains Mono",monospace}
+.font-normal{font-weight:400}
+.font-sans{font-family:"Plus Jakarta Sans",-apple-system,sans-serif}
+.font-semibold{font-weight:600}
+.font-serif{font-family:"Cormorant Garamond",Georgia,serif}
+.from-gold{--tw-g1:#F0D9A8}
+.gap-1{gap:0.25rem}
+.gap-1\.5{gap:0.375rem}
+.gap-2{gap:0.5rem}
+.gap-2\.5{gap:0.625rem}
+.gap-3{gap:0.75rem}
+.gap-4{gap:1rem}
+.gap-5{gap:1.25rem}
+.gap-6{gap:1.5rem}
+.grid{display:grid}
+.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}
+.group:hover .group-hover\:bg-ember{background-color:#FF5E1A}
+.group:hover .group-hover\:border-gold{border-color:#F0D9A8}
+.group:hover .group-hover\:w-14{width:3.5rem}
+.h-1\.5{height:0.375rem}
+.h-2{height:0.5rem}
+.h-36{height:9rem}
+.h-4{height:1rem}
+.h-5{height:1.25rem}
+.h-9{height:2.25rem}
+.h-\[calc\(100%-24px\)\]{height:calc(100% - 24px)}
+.h-full{height:100%}
+.h-px{height:1px}
+.hidden{display:none!important}
+.hover\:bg-ember\/20:hover{background-color:rgba(255,94,26,0.2)}
+.hover\:bg-gold\/10:hover{background-color:rgba(240,217,168,0.1)}
+.hover\:bg-gold\/15:hover{background-color:rgba(240,217,168,0.15)}
+.hover\:border-gold:hover{border-color:#F0D9A8}
+.hover\:border-gold\/40:hover{border-color:rgba(240,217,168,0.4)}
+.hover\:text-ember-light:hover{color:#FF8552}
+.hover\:text-gold:hover{color:#F0D9A8}
+.hover\:text-gold-light:hover{color:#FBF0D9}
+.hover\:text-white:hover{color:#ffffff}
+.inline-flex{display:inline-flex}
+.inset-0{top:0;right:0;bottom:0;left:0}
+.inset-3{top:0.75rem;right:0.75rem;bottom:0.75rem;left:0.75rem}
+.italic{font-style:italic}
+.items-baseline{align-items:baseline}
+.items-center{align-items:center}
+.items-start{align-items:flex-start}
+.justify-between{justify-content:space-between}
+.justify-center{justify-content:center}
+.leading-\[1\.06\]{line-height:1.06}
+.leading-relaxed{line-height:1.625}
+.leading-tight{line-height:1.25}
+.left-0{left:0}
+.max-h-60{max-height:15rem}
+.max-h-80{max-height:20rem}
+.max-w-2xl{max-width:42rem}
+.max-w-3xl{max-width:48rem}
+.max-w-4xl{max-width:56rem}
+.max-w-5xl{max-width:64rem}
+.max-w-6xl{max-width:72rem}
+.max-w-7xl{max-width:80rem}
+.max-w-lg{max-width:32rem}
+.max-w-md{max-width:28rem}
+.max-w-xl{max-width:36rem}
+.mb-1{margin-bottom:0.25rem}
+.mb-10{margin-bottom:2.5rem}
+.mb-12{margin-bottom:3rem}
+.mb-16{margin-bottom:4rem}
+.mb-2{margin-bottom:0.5rem}
+.mb-2\.5{margin-bottom:0.625rem}
+.mb-3{margin-bottom:0.75rem}
+.mb-4{margin-bottom:1rem}
+.mb-5{margin-bottom:1.25rem}
+.mb-6{margin-bottom:1.5rem}
+.mb-8{margin-bottom:2rem}
+.min-h-screen{min-height:100vh}
+.ml-1{margin-left:0.25rem}
+.mr-1{margin-right:0.25rem}
+.mt-28{margin-top:7rem}
+.mt-3{margin-top:0.75rem}
+.mt-4{margin-top:1rem}
+.mt-5{margin-top:1.25rem}
+.mt-6{margin-top:1.5rem}
+.mx-auto{margin-left:auto;margin-right:auto}
+.opacity-75{opacity:0.75}
+.opacity-80{opacity:0.8}
+.overflow-hidden{overflow:hidden}
+.overflow-y-auto{overflow-y:auto}
+.p-3\.5{padding:0.875rem}
+.p-4{padding:1rem}
+.p-5{padding:1.25rem}
+.p-6{padding:1.5rem}
+.p-8{padding:2rem}
+.pb-24{padding-bottom:6rem}
+.pb-4{padding-bottom:1rem}
+.pb-6{padding-bottom:1.5rem}
+.pr-1{padding-right:0.25rem}
+.pt-1{padding-top:0.25rem}
+.pt-2{padding-top:0.5rem}
+.pt-2\.5{padding-top:0.625rem}
+.pt-24{padding-top:6rem}
+.pt-3{padding-top:0.75rem}
+.pt-4{padding-top:1rem}
+.px-1{padding-left:0.25rem;padding-right:0.25rem}
+.px-1\.5{padding-left:0.375rem;padding-right:0.375rem}
+.px-2{padding-left:0.5rem;padding-right:0.5rem}
+.px-2\.5{padding-left:0.625rem;padding-right:0.625rem}
+.px-3{padding-left:0.75rem;padding-right:0.75rem}
+.px-3\.5{padding-left:0.875rem;padding-right:0.875rem}
+.px-4{padding-left:1rem;padding-right:1rem}
+.px-5{padding-left:1.25rem;padding-right:1.25rem}
+.px-6{padding-left:1.5rem;padding-right:1.5rem}
+.px-8{padding-left:2rem;padding-right:2rem}
+.py-0\.5{padding-top:0.125rem;padding-bottom:0.125rem}
+.py-1{padding-top:0.25rem;padding-bottom:0.25rem}
+.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}
+.py-10{padding-top:2.5rem;padding-bottom:2.5rem}
+.py-2{padding-top:0.5rem;padding-bottom:0.5rem}
+.py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}
+.py-3{padding-top:0.75rem;padding-bottom:0.75rem}
+.py-3\.5{padding-top:0.875rem;padding-bottom:0.875rem}
+.py-4{padding-top:1rem;padding-bottom:1rem}
+.py-6{padding-top:1.5rem;padding-bottom:1.5rem}
+.relative{position:relative}
+.resize-none{resize:none}
+.right-0{right:0}
+.right-5{right:1.25rem}
+.rounded{border-radius:0.25rem}
+.rounded-2xl{border-radius:1rem}
+.rounded-3xl{border-radius:1.5rem}
+.rounded-full{border-radius:9999px}
+.rounded-lg{border-radius:0.5rem}
+.rounded-xl{border-radius:0.75rem}
+.scroll-mt-24{scroll-margin-top:6rem}
+.scroll-mt-28{scroll-margin-top:7rem}
+.scroll-smooth{scroll-behavior:smooth}
+.shadow-\[0_0_10px_\#F0D9A8\]{box-shadow:0 0 10px #F0D9A8}
+.shadow-\[0_0_20px_rgba\(240\,217\,168\,0\.4\)\]{box-shadow:0 0 20px rgba(240,217,168,0.4)}
+.shadow-\[0_0_25px_\#FF5E1A\,0_0_50px_\#F0D9A8\]{box-shadow:0 0 25px #FF5E1A,0 0 50px #F0D9A8}
+.shadow-\[0_0_6px_\#34d399\]{box-shadow:0 0 6px #34d399}
+.shadow-\[0_0_6px_\#F0D9A8\]{box-shadow:0 0 6px #F0D9A8}
+.shadow-\[0_0_8px_\#F0D9A8\]{box-shadow:0 0 8px #F0D9A8}
+.shadow-\[0_0_8px_\#FF5E1A\]{box-shadow:0 0 8px #FF5E1A}
+.shrink-0{flex-shrink:0}
+.space-y-1>*+*{margin-top:0.25rem}
+.space-y-1\.5>*+*{margin-top:0.375rem}
+.space-y-2\.5>*+*{margin-top:0.625rem}
+.space-y-3>*+*{margin-top:0.75rem}
+.space-y-4>*+*{margin-top:1rem}
+.space-y-6>*+*{margin-top:1.5rem}
+.text-2xl{font-size:1.5rem}
+.text-3xl{font-size:1.875rem}
+.text-4xl{font-size:2.25rem}
+.text-5xl{font-size:3rem}
+.text-\[10px\]{font-size:10px}
+.text-\[11px\]{font-size:11px}
+.text-\[9px\]{font-size:9px}
+.text-ash{color:#9E9284}
+.text-ash-light{color:#C4B9AA}
+.text-base{font-size:1rem}
+.text-center{text-align:center}
+.text-ember{color:#FF5E1A}
+.text-ember-light{color:#FF8552}
+.text-gold{color:#F0D9A8}
+.text-gold-light{color:#FBF0D9}
+.text-gold-warm{color:#E5C178}
+.text-gold\/20{color:rgba(240,217,168,0.2)}
+.text-gold\/35{color:rgba(240,217,168,0.35)}
+.text-gold\/70{color:rgba(240,217,168,0.7)}
+.text-gold\/80{color:rgba(240,217,168,0.8)}
+.text-gold\/90{color:rgba(240,217,168,0.9)}
+.text-gray-200{color:#e5e7eb}
+.text-left{text-align:left}
+.text-lg{font-size:1.125rem}
+.text-sm{font-size:0.875rem}
+.text-void{color:#0a0705}
+.text-white{color:#ffffff}
+.text-xl{font-size:1.25rem}
+.text-xs{font-size:0.75rem}
+.to-ember{--tw-g3:#FF5E1A}
+.to-gold-light{--tw-g3:#FBF0D9}
+.top-0{top:0}
+.top-5{top:1.25rem}
+.tracking-\[0\.25em\]{letter-spacing:0.25em}
+.tracking-\[0\.2em\]{letter-spacing:0.2em}
+.tracking-tight{letter-spacing:-0.025em}
+.tracking-wide{letter-spacing:0.025em}
+.tracking-wider{letter-spacing:0.05em}
+.tracking-widest{letter-spacing:0.1em}
+.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4,0,0.2,1);transition-duration:150ms}
+.transition-colors{transition-property:color,background-color,border-color;transition-timing-function:cubic-bezier(0.4,0,0.2,1);transition-duration:150ms}
+.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(0.4,0,0.2,1);transition-duration:150ms}
+.underline{text-decoration:underline}
+.uppercase{text-transform:uppercase}
+.via-ember{--tw-g2:#FF5E1A}
+.w-1\.5{width:0.375rem}
+.w-2{width:0.5rem}
+.w-36{width:9rem}
+.w-4{width:1rem}
+.w-5{width:1.25rem}
+.w-8{width:2rem}
+.w-9{width:2.25rem}
+.w-\[calc\(100%-24px\)\]{width:calc(100% - 24px)}
+.w-full{width:100%}
+.whitespace-pre-line{white-space:pre-line}
+.z-10{z-index:10}
+.z-40{z-index:40}
+.z-50{z-index:50}
+@media(min-width:640px){.sm\:block{display:block}.sm\:flex-row{flex-direction:row}.sm\:gap-3{gap:0.75rem}.sm\:gap-5{gap:1.25rem}.sm\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.sm\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.sm\:h-44{height:11rem}.sm\:inline{display:inline}.sm\:items-center{align-items:center}.sm\:mb-12{margin-bottom:3rem}.sm\:mt-36{margin-top:9rem}.sm\:p-10{padding:2.5rem}.sm\:p-14{padding:3.5rem}.sm\:p-5{padding:1.25rem}.sm\:p-6{padding:1.5rem}.sm\:p-8{padding:2rem}.sm\:p-9{padding:2.25rem}.sm\:pt-32{padding-top:8rem}.sm\:pt-4{padding-top:1rem}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:py-10{padding-top:2.5rem;padding-bottom:2.5rem}.sm\:py-5{padding-top:1.25rem;padding-bottom:1.25rem}.sm\:text-2xl{font-size:1.5rem}.sm\:text-3xl{font-size:1.875rem}.sm\:text-4xl{font-size:2.25rem}.sm\:text-5xl{font-size:3rem}.sm\:text-6xl{font-size:3.75rem}.sm\:text-base{font-size:1rem}.sm\:text-lg{font-size:1.125rem}.sm\:text-sm{font-size:0.875rem}.sm\:text-xl{font-size:1.25rem}.sm\:w-44{width:11rem}}
+@media(min-width:768px){.md\:col-span-5{grid-column:span 5/span 5}.md\:col-span-7{grid-column:span 7/span 7}.md\:flex-row{flex-direction:row}.md\:grid-cols-12{grid-template-columns:repeat(12,minmax(0,1fr))}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.md\:inline{display:inline}.md\:inline-block{display:inline-block}.md\:items-end{align-items:flex-end}.md\:p-10{padding:2.5rem}.md\:p-12{padding:3rem}.md\:text-7xl{font-size:4.5rem}.md\:text-lg{font-size:1.125rem}}
+@media(min-width:1024px){.lg\:col-span-5{grid-column:span 5/span 5}.lg\:col-span-7{grid-column:span 7/span 7}.lg\:flex{display:flex}.lg\:grid-cols-12{grid-template-columns:repeat(12,minmax(0,1fr))}.lg\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.placeholder\:text-ash\/50::placeholder{color:rgba(158,146,132,0.5)}
+::selection{background-color:rgba(217,56,0,0.3)}
+::selection{color:#FBF0D9}
+
+.lg\:hidden{}
+@media(min-width:1024px){.lg\:hidden{display:none!important}}
+.bg-ember\/10{background-color:rgba(255,94,26,0.1)}
+.bg-gold\/10{background-color:rgba(240,217,168,0.1)}
+input[type=range]::-moz-range-thumb{background:#F0D9A8;border:1px solid #B88E44;border-radius:9999px;width:14px;height:14px}
+/* === Original custom styles below === */
+/* === Claude's bell: verdict arrival pulse (stillness after the converge) === */
+@keyframes verdict-bell{0%{opacity:0;box-shadow:0 0 0 0 rgba(240,217,168,0)}35%{opacity:1;box-shadow:0 0 90px 10px rgba(240,217,168,.14)}100%{opacity:1;box-shadow:0 0 0 0 rgba(240,217,168,0)}}
+.verdict-bell{animation:verdict-bell 2.4s cubic-bezier(.2,.7,.1,1) both}
+/* === Luna's darkness-to-light: page brightens toward the ask === */
+:root{--dawn:0}
+.dawn-layer{position:fixed;inset:0;z-index:2;pointer-events:none;opacity:var(--dawn);
+background:radial-gradient(ellipse 80% 50% at 50% 100%,rgba(240,217,168,.07),transparent 70%)}
+
+    :root {
+      --bg-void: #0a0705;
+      --gold-molten: #F0D9A8;
+      --gold-champagne: #E5C178;
+      --ember-bright: #FF5E1A;
+      --ember-deep: #D93800;
+      --ash-muted: #9E9284;
+    }
+
+    * {
+      box-sizing: border-box;
+      selection-background-color: rgba(240, 217, 168, 0.25);
+      selection-color: #F0D9A8;
+    }
+
+    ::selection {
+      background: rgba(255, 94, 26, 0.28);
+      color: #FBF0D9;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-color: #0a0705;
+      color: #F5EFE6;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Full Viewport Generative Canvas */
+    #tandav-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /* Subtle Radial Vignette Overlay so text always stays ultra-legible */
+    .vignette-layer {
+      position: fixed;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      background: 
+        radial-gradient(circle at 50% 38%, rgba(10, 7, 5, 0.15) 0%, rgba(10, 7, 5, 0.68) 65%, rgba(10, 7, 5, 0.92) 100%),
+        linear-gradient(180deg, rgba(10, 7, 5, 0.75) 0%, rgba(10, 7, 5, 0.15) 18%, rgba(10, 7, 5, 0.25) 82%, rgba(10, 7, 5, 0.96) 100%);
+    }
+
+    /* Obsidian Glass Surfaces */
+    .obsidian-card {
+      background: rgba(16, 11, 8, 0.74);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(240, 217, 168, 0.14);
+      box-shadow: 
+        0 24px 60px -15px rgba(0, 0, 0, 0.85),
+        0 0 1px 1px rgba(240, 217, 168, 0.05) inset;
+      transition: border-color 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .obsidian-card:hover {
+      border-color: rgba(240, 217, 168, 0.26);
+    }
+
+    .obsidian-card-active {
+      background: rgba(20, 13, 9, 0.84);
+      border: 1px solid rgba(240, 217, 168, 0.34);
+      box-shadow: 
+        0 30px 80px -12px rgba(0, 0, 0, 0.92),
+        0 0 40px -10px rgba(255, 94, 26, 0.16),
+        0 0 25px -8px rgba(240, 217, 168, 0.14) inset;
+    }
+
+    /* Molten Gold Text Gradient */
+    .text-molten {
+      background: linear-gradient(135deg, #FFFDF9 0%, #F0D9A8 48%, #E5C178 78%, #FF773D 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .text-ember-glow {
+      color: #FF6B2B;
+      text-shadow: 0 0 18px rgba(255, 94, 26, 0.45);
+    }
+
+    /* Custom Input Styling */
+    .tandav-input {
+      background: rgba(10, 7, 5, 0.72);
+      border: 1px solid rgba(240, 217, 168, 0.18);
+      color: #FAF5EC;
+      transition: all 0.25s ease;
+    }
+
+    .tandav-input:focus {
+      outline: none;
+      border-color: #F0D9A8;
+      background: rgba(14, 10, 7, 0.92);
+      box-shadow: 0 0 0 3px rgba(240, 217, 168, 0.12), 0 0 28px rgba(255, 94, 26, 0.18);
+    }
+
+    /* Ignite Button */
+    .btn-ignite {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, #F0D9A8 0%, #E5C178 55%, #FF6B2B 100%);
+      color: #0a0705;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      box-shadow: 
+        0 10px 35px -5px rgba(255, 94, 26, 0.45),
+        0 0 20px rgba(240, 217, 168, 0.35);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .btn-ignite:hover:not(:disabled) {
+      transform: translateY(-2px);
+      box-shadow: 
+        0 16px 45px -5px rgba(255, 94, 26, 0.65),
+        0 0 30px rgba(240, 217, 168, 0.55);
+      filter: brightness(1.05);
+    }
+
+    .btn-ignite:active:not(:disabled) {
+      transform: translateY(0px) scale(0.99);
+    }
+
+    .btn-ignite::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -60%;
+      width: 45%;
+      height: 200%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.55), transparent);
+      transform: rotate(25deg);
+      transition: left 0.65s ease;
+    }
+
+    .btn-ignite:hover::after {
+      left: 125%;
+    }
+
+    /* Range Slider for 1-249 Horary Seed */
+    input[type="range"].seed-slider {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(90deg, rgba(240,217,168,0.15) 0%, rgba(255,94,26,0.45) 50%, rgba(240,217,168,0.25) 100%);
+      border-radius: 999px;
+      outline: none;
+    }
+
+    input[type="range"].seed-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #F0D9A8;
+      border: 2px solid #0a0705;
+      box-shadow: 0 0 14px #FF5E1A, 0 0 6px #F0D9A8;
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    input[type="range"].seed-slider::-webkit-slider-thumb:hover {
+      transform: scale(1.2);
+      box-shadow: 0 0 22px #FF5E1A, 0 0 12px #F0D9A8;
+    }
+
+    /* Singularity Flash Overlay when Verdict Coalesces */
+    #singularity-flash {
+      position: fixed;
+      inset: 0;
+      z-index: 60;
+      pointer-events: none;
+      opacity: 0;
+      background: radial-gradient(circle at 50% 45%, rgba(255, 248, 231, 0.9) 0%, rgba(240, 217, 168, 0.45) 25%, rgba(255, 94, 26, 0.18) 55%, transparent 80%);
+      transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Verdict Glow Badges */
+    .verdict-badge-yes {
+      background: radial-gradient(circle at 50% 0%, rgba(240, 217, 168, 0.25), rgba(18, 13, 9, 0.92));
+      border: 1px solid rgba(240, 217, 168, 0.65);
+      box-shadow: 0 0 45px -5px rgba(240, 217, 168, 0.35), 0 0 20px rgba(240, 217, 168, 0.15) inset;
+      color: #FBF0D9;
+    }
+
+    .verdict-badge-delay {
+      background: radial-gradient(circle at 50% 0%, rgba(255, 133, 51, 0.24), rgba(18, 13, 9, 0.92));
+      border: 1px solid rgba(240, 217, 168, 0.5);
+      box-shadow: 0 0 45px -5px rgba(255, 94, 26, 0.32), 0 0 20px rgba(240, 217, 168, 0.12) inset;
+      color: #F0D9A8;
+    }
+
+    .verdict-badge-no {
+      background: radial-gradient(circle at 50% 0%, rgba(255, 65, 35, 0.28), rgba(18, 13, 9, 0.94));
+      border: 1px solid rgba(255, 94, 26, 0.6);
+      box-shadow: 0 0 45px -5px rgba(217, 56, 0, 0.42), 0 0 20px rgba(255, 94, 26, 0.16) inset;
+      color: #FF8552;
+    }
+
+    /* Hairline Dividers */
+    .hairline-gold {
+      height: 1px;
+      background: linear-gradient(90deg, transparent 0%, rgba(240, 217, 168, 0.28) 50%, transparent 100%);
+    }
+
+    /* Scrollbar styling */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0a0705;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(240, 217, 168, 0.22);
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(240, 217, 168, 0.45);
+    }
+
+    /* Subtle Pulse Animations */
+    @keyframes pulse-slow {
+      0%, 100% { opacity: 0.45; transform: scale(1); }
+      50% { opacity: 0.95; transform: scale(1.06); }
+    }
+    .animate-pulse-slow {
+      animation: pulse-slow 3.2s infinite ease-in-out;
+    }
+
+    @keyframes spin-slow {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    .animate-spin-slow {
+      animation: spin-slow 28s linear infinite;
+    }
+    .animate-spin-reverse {
+      animation: spin-slow 18s linear infinite reverse;
+    }
+  
+/* Gemini bug-fix: missing utilities (plain-CSS Tailwind replacements) */
+.select-none{user-select:none;-webkit-user-select:none}
+.touch-none{touch-action:none}
+.pt-28{padding-top:7rem}
+.pb-16{padding-bottom:4rem}
+.mt-16{margin-top:4rem}
+.text-gold-light\/70{color:rgba(251,240,217,.7)}
+.accent-\[\#F0D9A8\]{accent-color:#F0D9A8}
+@media(min-width:640px){.sm\:px-10{padding-left:2.5rem;padding-right:2.5rem}}
+    .text-ash-dark{color:#5C5349}
+    .mt-2{margin-top:0.5rem}
+    
+/* Accessibility: respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+  html { scroll-behavior: auto !important; }
+}
+</style>
+</head>
+<body class="relative min-h-screen selection:bg-ember/30 selection:text-gold-light">
+<div class="dawn-layer"></div>
+
+  <!-- =====================================================================
+       FULL-VIEWPORT SHIV TANDAV GENERATIVE PARTICLE & GEOMETRY CANVAS
+       ===================================================================== -->
+  <canvas id="tandav-canvas" aria-hidden="true"></canvas>
+  <div class="vignette-layer" aria-hidden="true"></div>
+  <div id="singularity-flash" aria-hidden="true"></div>
+
+  <!-- =====================================================================
+       1. MINIMAL FLOATING NAVIGATION
+       ===================================================================== -->
+  <header class="fixed top-0 left-0 right-0 z-40 px-3 sm:px-6 pt-3 sm:pt-4">
+    <nav class="max-w-7xl mx-auto obsidian-card rounded-2xl px-4 sm:px-6 py-3 flex items-center justify-between gap-3">
+      
+      <!-- Brand Sigil & Live Ephemeris Clock -->
+      <a href="#oracle-top" class="flex items-center gap-3 group focus:outline-none">
+        <div class="relative w-9 h-9 rounded-full flex items-center justify-center border border-gold/30 bg-void/80 group-hover:border-gold transition-colors">
+          <!-- Abstract geometric point-and-orbit sigil -->
+          <svg class="w-5 h-5 text-gold animate-spin-slow" viewBox="0 0 32 32" fill="none">
+            <circle cx="16" cy="16" r="12" stroke="currentColor" stroke-width="1" stroke-dasharray="3 3" opacity="0.65"/>
+            <ellipse cx="16" cy="16" rx="13" ry="5.5" transform="rotate(32 16 16)" stroke="#FF5E1A" stroke-width="1.1" opacity="0.85"/>
+            <ellipse cx="16" cy="16" rx="13" ry="5.5" transform="rotate(-32 16 16)" stroke="currentColor" stroke-width="1" opacity="0.55"/>
+          </svg>
+          <span class="absolute w-2 h-2 rounded-full bg-gold shadow-[0_0_10px_#F0D9A8]"></span>
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="font-serif text-lg sm:text-xl font-semibold tracking-wider text-gold-light">ASTROMAN AI</span>
+            <span class="hidden md:inline-block text-[10px] font-mono uppercase tracking-widest px-1.5 py-0.5 rounded bg-ember/15 text-ember-light border border-ember/30">KP 249</span>
+          </div>
+          <div id="live-ephemeris-clock" class="font-mono text-[10px] text-ash tracking-wider hidden sm:block">
+            LIVE CHART · SYNCING...
+          </div>
+        </div>
+      </a>
+
+      <!-- Center Navigation Links -->
+      <div class="hidden lg:flex items-center gap-6 text-xs font-medium tracking-wide text-ash-light">
+        <a href="ask.html" class="hover:text-gold transition-colors">Ask the Oracle</a>
+        <a href="#how-it-works" class="hover:text-gold transition-colors">How It Works</a>
+        <a href="#sample-verdicts" class="hover:text-gold transition-colors">Sample Verdicts</a>
+        <a href="#honest-wall" class="hover:text-gold transition-colors">Honest Wall</a>
+        <a href="#pricing" class="hover:text-gold transition-colors">Pricing</a>
+        <a href="#faq" class="hover:text-gold transition-colors">FAQ</a>
+      </div>
+
+      <!-- Right: quota pill + mobile Ask CTA -->
+      <div class="flex items-center gap-2">
+        <a href="ask.html" class="lg:hidden text-xs font-semibold tracking-wider uppercase px-4 py-2 rounded-full bg-gold text-void">Ask</a>
+        <div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-void/90 border border-gold/25 text-xs font-mono">
+          <span id="quota-dot" class="w-2 h-2 rounded-full bg-gold shadow-[0_0_8px_#F0D9A8]"></span>
+          <span id="free-quota-label" class="text-gold-light">5 of 5 Free Left</span>
+          <button id="sound-toggle" title="Toggle sound" class="ml-1 text-gold-light/70 hover:text-gold-light text-xs">🔔</button>
+        </div>
+      </div>
+
+    </nav>
+  </header>
+
+  <!-- =====================================================================
+       MAIN CONTENT CONTAINER
+       ===================================================================== -->
+  <main id="oracle-top" class="relative z-10 pt-24 sm:pt-32 pb-24">
+
+    <!-- ===================================================================
+         2. HERO SECTION & THE INTERACTIVE ORACLE INTERFACE
+         =================================================================== -->
+    <section class="max-w-5xl mx-auto px-4 sm:px-6">
+      
+      <!-- Hero Editorial Header -->
+      <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
+        <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-obsidian/90 border border-gold/20 mb-5">
+          <span class="w-1.5 h-1.5 rounded-full bg-ember animate-ping"></span>
+          <span class="font-mono text-[11px] uppercase tracking-[0.2em] text-gold">
+            KP PRASHNA ENGINE · 249 SUB-LORD MATHEMATICS
+          </span>
+        </div>
+
+        <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl font-normal leading-[1.06] tracking-tight text-white mb-5">
+          Chaos in the mind.<br />
+          <span class="italic font-normal text-molten">One clear answer in the dark.</span>
+        </h1>
+
+        <p class="text-sm sm:text-base md:text-lg text-ash-light max-w-2xl mx-auto leading-relaxed font-normal">
+          Ask one burning yes-or-no question about your exam, career, love, or money. 
+          <span class="text-gold-light font-medium">No birth date or birth time needed.</span> 
+          Pick a number from 1 to 249 — our engine casts a real astronomical chart for the exact second and city you ask.
+        </p>
+
+        <!-- Live Cosmic Dance State Indicator Bar -->
+        <div class="mt-6 inline-flex flex-wrap items-center justify-center gap-3 sm:gap-5 px-4 py-2 rounded-xl bg-void/70 border border-gold/10 font-mono text-[11px] text-ash">
+          <span class="flex items-center gap-1.5">
+            <span id="state-indicator-dot" class="w-2 h-2 rounded-full bg-gold"></span>
+            <span>FIELD STATE: <strong id="canvas-state-readout" class="text-gold-light">TANDAV FLOW (IDLE)</strong></span>
+          </span>
+          <span class="hidden sm:inline text-gold/20">|</span>
+          <span>ACTIVE COORDINATE: <strong id="hero-degree-readout" class="text-ember-light">00°00'00" GEMINI (MER–MAR–MER)</strong></span>
+          <span class="hidden md:inline text-gold/20">|</span>
+          <button id="toggle-motion-btn" class="text-gold/80 hover:text-gold underline decoration-dotted">
+            Pause Motion
+          </button>
+        </div>
+      </div>
+
+      <!-- ASK CTA BRIDGE (ask lives on its own page now) -->
+      <div class="max-w-3xl mx-auto text-center px-4 mt-16 mb-8">
+        <a href="ask.html" class="btn-ignite inline-flex items-center gap-3 rounded-2xl py-4 sm:py-5 px-8 sm:px-10 text-base sm:text-lg font-sans">
+          <span>Ask Your Question — Free</span>
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <path d="M5 12h14M13 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <p class="font-mono text-xs text-ash mt-4">5 free questions · No sign-up · 30 seconds</p>
+      </div>
+      </section>
+
+
+    <!-- ===================================================================
+         5. HOW IT WORKS — 4 PRECISE STEPS (ASK → NUMBER → CITY → ANSWER)
+         =================================================================== -->
+    <section id="how-it-works" class="max-w-6xl mx-auto px-4 sm:px-6 mt-28 sm:mt-36 scroll-mt-24">
+      <div class="hairline-gold mb-16"></div>
+
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div>
+          <div class="font-mono text-xs uppercase tracking-[0.2em] text-ember-light mb-2">
+            THE ARCHITECTURE OF CLARITY
+          </div>
+          <h2 class="font-serif text-3xl sm:text-5xl text-white font-normal">
+            Wild cosmic energy.<br />
+            <span class="italic text-molten">Four razor-sharp steps.</span>
+          </h2>
+        </div>
+        <p class="text-sm sm:text-base text-ash-light max-w-md">
+          Traditional astrology needs your exact birth minute and hospital record. 
+          <strong class="text-gold-light font-medium">KP Prashna Kundli (Horary)</strong> doesn't. It measures the universe at the exact instant a question burns strong enough for you to ask it.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        
+        <!-- Step 1 -->
+        <div class="obsidian-card rounded-2xl p-6 flex flex-col justify-between relative group">
+          <div>
+            <div class="flex items-center justify-between font-mono text-xs text-gold mb-6">
+              <span>STEP 01</span>
+              <span class="w-8 h-px bg-gold/30 group-hover:w-14 group-hover:bg-ember transition-all"></span>
+            </div>
+            <h3 class="font-serif text-2xl text-white mb-2.5">Ask One Burning Question</h3>
+            <p class="text-xs sm:text-sm text-ash-light leading-relaxed">
+              Ask one clear Yes/No question about Career, Exams, Relationships, or Money. One question at a time — no vague "how is my future?" prompts.
+            </p>
+          </div>
+          <div class="mt-6 pt-3 border-t border-gold/10 font-mono text-[11px] text-gold/70">
+            YOUR QUESTION
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="obsidian-card rounded-2xl p-6 flex flex-col justify-between relative group">
+          <div>
+            <div class="flex items-center justify-between font-mono text-xs text-gold mb-6">
+              <span>STEP 02</span>
+              <span class="w-8 h-px bg-gold/30 group-hover:w-14 group-hover:bg-ember transition-all"></span>
+            </div>
+            <h3 class="font-serif text-2xl text-white mb-2.5">Pick a Number (1–249)</h3>
+            <p class="text-xs sm:text-sm text-ash-light leading-relaxed">
+              No birth chart needed. In KP horary, the first number that comes to your mind at the moment of asking sets the chart. Close your eyes and pick one — or press, hold, and release when it feels right.
+            </p>
+          </div>
+          <div class="mt-6 pt-3 border-t border-gold/10 font-mono text-[11px] text-ember-light">
+            YOUR NUMBER
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="obsidian-card rounded-2xl p-6 flex flex-col justify-between relative group">
+          <div>
+            <div class="flex items-center justify-between font-mono text-xs text-gold mb-6">
+              <span>STEP 03</span>
+              <span class="w-8 h-px bg-gold/30 group-hover:w-14 group-hover:bg-ember transition-all"></span>
+            </div>
+            <h3 class="font-serif text-2xl text-white mb-2.5">Enter Your Current City</h3>
+            <p class="text-xs sm:text-sm text-ash-light leading-relaxed">
+              The sky looks different from different places on Earth. Your city tells the engine exactly where you are standing right now, so the chart is cast for this moment, here.
+            </p>
+          </div>
+          <div class="mt-6 pt-3 border-t border-gold/10 font-mono text-[11px] text-gold/70">
+            YOUR PLACE
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="obsidian-card rounded-2xl p-6 flex flex-col justify-between relative group">
+          <div>
+            <div class="flex items-center justify-between font-mono text-xs text-gold mb-6">
+              <span>STEP 04</span>
+              <span class="w-8 h-px bg-gold/30 group-hover:w-14 group-hover:bg-ember transition-all"></span>
+            </div>
+            <h3 class="font-serif text-2xl text-white mb-2.5">Get a Straight Answer</h3>
+            <p class="text-xs sm:text-sm text-ash-light leading-relaxed">
+              The engine checks whether the planets support your question and answers plainly: <strong class="text-gold-light">YES</strong>, <strong class="text-ember-light">NO</strong>, or <strong class="text-gold">YES — with delays</strong>. No riddles, no "maybe", no fear.
+            </p>
+          </div>
+          <div class="mt-6 pt-3 border-t border-gold/10 font-mono text-[11px] text-gold-light">
+            ONE CLEAR ANSWER
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         5B. NOT CHATGPT — WHY THIS IS DIFFERENT FROM OTHER AI
+         =================================================================== -->
+    <section id="not-chatgpt" class="max-w-5xl mx-auto px-4 sm:px-6 mt-28 sm:mt-36 scroll-mt-24">
+      <div class="obsidian-card rounded-3xl p-6 sm:p-10 md:p-12 border border-gold/20 relative overflow-hidden">
+        <div class="max-w-3xl">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold/10 border border-gold/30 font-mono text-[11px] text-gold-light uppercase tracking-widest mb-5">
+            NOT ANOTHER AI ASTROLOGER
+          </div>
+
+          <h2 class="font-serif text-3xl sm:text-5xl text-white font-normal leading-tight mb-4">
+            ChatGPT <span class="italic text-molten">hallucinates.</span><br />
+            We <span class="italic text-gold-light">calculate.</span>
+          </h2>
+
+          <p class="text-sm sm:text-base text-ash-light leading-relaxed mb-6">
+            Ask any other AI "will I clear NEET?" and it will invent a confident-sounding answer from thin air.
+            It has no chart, no method, no math — it just predicts the next word. Ask it twice, get two different confident answers.
+            That is hallucination, and it is why AI astrology has a trust problem.
+          </p>
+          <p class="text-sm sm:text-base text-ash-light leading-relaxed mb-8">
+            Astroman AI was built to be the opposite. <strong class="text-gold-light">The AI never decides your answer.</strong>
+            Your question, your number, your city, this exact second — those go into a real KP horary chart,
+            calculated with Swiss Ephemeris astronomy and judged by rules from published KP books.
+            The AI only translates the engine's mathematics into plain words you can understand.
+            It cannot invent the verdict, because the verdict comes from the calculation, not from the AI.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div class="p-4 rounded-2xl bg-void/80 border border-ember/25">
+              <div class="font-mono text-[10px] uppercase tracking-widest text-ember-light mb-1">Other AI</div>
+              <div class="font-serif text-xl text-white italic mb-1">Guesses words</div>
+              <p class="text-xs text-ash">No chart is cast. The answer is generated language — confident, fluent, and made up.</p>
+            </div>
+            <div class="p-4 rounded-2xl bg-void/80 border border-gold/25">
+              <div class="font-mono text-[10px] uppercase tracking-widest text-gold mb-1">Astroman AI</div>
+              <div class="font-serif text-xl text-gold-light italic mb-1">Casts a chart</div>
+              <p class="text-xs text-ash">Every answer starts as a real astronomical calculation for your exact moment and place.</p>
+            </div>
+            <div class="p-4 rounded-2xl bg-void/80 border border-gold/25">
+              <div class="font-mono text-[10px] uppercase tracking-widest text-gold mb-1">The AI's Only Job</div>
+              <div class="font-serif text-xl text-gold-light italic mb-1">Translates math</div>
+              <p class="text-xs text-ash">The language model turns the engine's verdict into clear words. It never decides, only explains.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         6. INTERACTIVE SAMPLE ANSWER CARD SHOWCASE
+         =================================================================== -->
+    <section id="sample-verdicts" class="max-w-5xl mx-auto px-4 sm:px-6 mt-28 sm:mt-36 scroll-mt-24">
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <div class="font-mono text-xs uppercase tracking-[0.2em] text-gold mb-2">
+          SAMPLE PRASHNA OUTPUTS
+        </div>
+        <h2 class="font-serif text-3xl sm:text-5xl text-white font-normal mb-3">
+          No cryptic riddles. <span class="italic text-molten">Direct verdicts.</span>
+        </h2>
+        <p class="text-sm text-ash-light">
+          Inspect how the engine resolves four real-life questions across Exams, Career, Love, and Money. Click any domain to inspect the chart output.
+        </p>
+      </div>
+
+      <!-- Category Selector Tabs -->
+      <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-8">
+        <button type="button" data-sample-tab="exam" class="sample-tab-btn px-5 py-2.5 rounded-full font-mono text-xs uppercase tracking-wider bg-gold text-void font-semibold shadow-[0_0_20px_rgba(240,217,168,0.4)] transition-all">
+          01 · Exam (NEET PG)
+        </button>
+        <button type="button" data-sample-tab="career" class="sample-tab-btn px-5 py-2.5 rounded-full font-mono text-xs uppercase tracking-wider bg-obsidian text-ash-light hover:text-gold-light border border-gold/20 transition-all">
+          02 · Career (Tech Offer)
+        </button>
+        <button type="button" data-sample-tab="love" class="sample-tab-btn px-5 py-2.5 rounded-full font-mono text-xs uppercase tracking-wider bg-obsidian text-ash-light hover:text-gold-light border border-gold/20 transition-all">
+          03 · Love &amp; Marriage
+        </button>
+        <button type="button" data-sample-tab="money" class="sample-tab-btn px-5 py-2.5 rounded-full font-mono text-xs uppercase tracking-wider bg-obsidian text-ash-light hover:text-gold-light border border-gold/20 transition-all">
+          04 · Money / Risk
+        </button>
+      </div>
+
+      <!-- Interactive Sample Display Card -->
+      <div id="sample-showcase-card" class="obsidian-card rounded-3xl p-6 sm:p-9 transition-all">
+        <div class="flex flex-wrap items-center justify-between gap-2 pb-4 mb-6 border-b border-gold/15 font-mono text-xs text-ash">
+          <span id="sample-cast-meta" class="text-gold-light">SEED #108 · DELHI · VIRGO 02°40'00" (MER–SUN–VEN)</span>
+          <span id="sample-house-rule" class="text-ember-light">KP RULE: CUSPS 4, 9, 11 EXAMINED</span>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+          <!-- Left: Question & Verdict Badge -->
+          <div class="lg:col-span-5 space-y-4">
+            <div>
+              <div class="font-mono text-[10px] uppercase tracking-widest text-ash mb-1">Querent's Question</div>
+              <h3 id="sample-q-title" class="font-serif text-2xl sm:text-3xl text-white italic">
+                "Will I clear NEET PG on this attempt?"
+              </h3>
+            </div>
+
+            <div id="sample-verdict-box" class="verdict-badge-delay rounded-2xl p-5 text-center">
+              <div class="font-mono text-[10px] uppercase tracking-widest opacity-75 mb-1">Prashna Verdict</div>
+              <div id="sample-verdict-title" class="font-serif text-3xl sm:text-4xl font-semibold">
+                YES — with delays
+              </div>
+            </div>
+
+            <button 
+              id="load-sample-into-oracle-btn" 
+              type="button"
+              class="w-full py-3 rounded-xl bg-void hover:bg-gold/15 border border-gold/25 font-mono text-xs text-gold-light transition-all cursor-pointer"
+            >
+              ↑ Load this Seed &amp; Question into Live Oracle
+            </button>
+          </div>
+
+          <!-- Right: Plain-Language Explanation & Modifiers -->
+          <div class="lg:col-span-7 p-5 sm:p-6 rounded-2xl bg-void/75 border border-gold/15 space-y-4">
+            <div class="font-mono text-[10px] uppercase tracking-widest text-gold">
+              Engine Narration (Zero Jargon)
+            </div>
+            <p id="sample-narration-body" class="text-sm sm:text-base text-gray-200 leading-relaxed">
+              Your chart shows strong competitive success, so the answer is YES — you have the planetary backing to secure a seat. However, Saturn's aspect on the 9th cusp sub-lord indicates the first counseling round may stall or leave you waitlisted. Your breakthrough arrives in the second/mop-up window between late August and mid-September. Don't drop heart after Round 1.
+            </p>
+            <div class="pt-2">
+              <div class="font-mono text-[10px] uppercase tracking-widest text-ash mb-2">Modifiers Returned</div>
+              <div id="sample-modifiers-wrap" class="flex flex-wrap gap-2">
+                <!-- Filled dynamically -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         7. RADICALLY HONEST PROOF SECTION + INTERACTIVE 249 SUB-LORD EXPLORER
+         =================================================================== -->
+    <section id="honest-wall" class="max-w-5xl mx-auto px-4 sm:px-6 mt-28 sm:mt-36 scroll-mt-24">
+      <div class="obsidian-card rounded-3xl p-6 sm:p-10 md:p-12 border border-ember/30 relative overflow-hidden">
+        
+        <div class="max-w-3xl">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-ember/15 border border-ember/35 font-mono text-[11px] text-ember-light uppercase tracking-widest mb-5">
+            NO FAKE REVIEWS
+          </div>
+
+          <h2 class="font-serif text-3xl sm:text-5xl text-white font-normal leading-tight mb-4">
+            We don't fake our <span class="italic text-molten">reviews.</span>
+          </h2>
+
+          <p class="text-sm sm:text-base text-ash-light leading-relaxed mb-6">
+            Almost every astrology site in India shows you glowing 5-star reviews next to stock photos — <em class="text-white">"Priya from Mumbai says 99.4% accurate!"</em> Most of those are invented to make you pay when you're feeling anxious.
+            <strong class="text-gold-light">We refuse to do that.</strong> Astroman AI is brand new. We don't have hundreds of verified reviews yet, because real predictions take real months to come true. We'd rather show you an honest empty wall than a wall of lies.
+          </p>
+
+          <!-- Honest Empty State Boxes -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+            <div class="p-4 rounded-2xl bg-void/80 border border-gold/15">
+              <div class="font-mono text-[10px] uppercase tracking-widest text-ash mb-1">Verified Outcomes</div>
+              <div class="font-serif text-2xl text-gold-light italic mb-1">Coming Soon</div>
+              <p class="text-xs text-ash">A review appears here only after the predicted time passes and the user confirms what actually happened.</p>
+            </div>
+            <div class="p-4 rounded-2xl bg-void/80 border border-gold/15">
+              <div class="font-mono text-[10px] uppercase tracking-widest text-ash mb-1">No Fear-Selling</div>
+              <div class="font-mono text-2xl text-white font-semibold mb-1">0</div>
+              <p class="text-xs text-ash">Zero "kaal sarp dosh" scares. Zero gemstone upsells. Zero paid influencer reviews.</p>
+            </div>
+            <div class="p-4 rounded-2xl bg-void/80 border border-gold/15">
+              <div class="font-mono text-[10px] uppercase tracking-widest text-ash mb-1">Don't Trust Us — Test Us</div>
+              <div class="font-serif text-2xl text-ember-light italic mb-1">The Mathematics</div>
+              <p class="text-xs text-ash">Ask your 5 free questions right now, or inspect the open 1–249 division table below. The math is yours to check.</p>
+            </div>
+          </div>
+
+          <!-- Interactive "Inspect the Engine's Math (1-249 Sub-Lord Table)" Toggle -->
+          <div class="pt-4 border-t border-gold/15">
+            <button 
+              id="toggle-math-inspector-btn" 
+              type="button"
+              class="flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-gold hover:text-gold-light transition-colors cursor-pointer"
+            >
+              <span id="math-inspector-arrow">▸</span>
+              <span>Inspect the Engine's Underlying 1–249 KP Sub-Lord Table</span>
+            </button>
+
+            <div id="math-inspector-drawer" class="hidden mt-5 p-4 sm:p-5 rounded-2xl bg-void/90 border border-gold/20">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                <span class="font-mono text-xs text-gold-light">KRISHNAMURTI PADDHATI · PROPORTIONAL VIMSHOTTARI 249 SUB-TABLE</span>
+                <span class="font-mono text-[11px] text-ash">The 249 sub-lord divisions — your number comes from impulse, not picking</span>
+              </div>
+              <div id="sublord-table-container" class="max-h-60 overflow-y-auto font-mono text-xs border-t border-gold/10 divide-y divide-gold/10">
+                <!-- Populated by JS -->
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         8. TRANSPARENT PRICING SECTION (4 TIERS IN INR)
+         =================================================================== -->
+    <section id="pricing" class="max-w-6xl mx-auto px-4 sm:px-6 mt-28 sm:mt-36 scroll-mt-24">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <div class="font-mono text-xs uppercase tracking-[0.2em] text-gold mb-2">
+          RADICALLY SIMPLE PRICING
+        </div>
+        <h2 class="font-serif text-3xl sm:text-5xl text-white font-normal mb-3">
+          Start in the dark for <span class="italic text-molten">₹0.</span>
+        </h2>
+        <p class="text-sm sm:text-base text-ash-light">
+          Your first 5 questions are completely free — no login, no phone number, no credit card. Pay only when you need deeper clarity.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+        
+        <!-- Tier 1: Free -->
+        <div class="obsidian-card rounded-3xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="font-mono text-[11px] uppercase tracking-widest text-ash mb-2">FIRST TASTE OF CLARITY</div>
+            <h3 class="font-serif text-2xl text-white mb-4">First 5 Questions</h3>
+            <div class="flex items-baseline gap-1 mb-5">
+              <span class="font-serif text-5xl text-gold-light font-semibold">₹0</span>
+              <span class="font-mono text-xs text-ash">/ during testing</span>
+            </div>
+            <ul class="space-y-2.5 text-xs sm:text-sm text-ash-light mb-6">
+              <li class="flex items-start gap-2"><span class="text-gold">✦</span> <span>5 full KP Prashna Kundli castings</span></li>
+              <li class="flex items-start gap-2"><span class="text-gold">✦</span> <span>Direct YES / NO / YES with delays verdict</span></li>
+              <li class="flex items-start gap-2"><span class="text-gold">✦</span> <span>Plain-language timing &amp; modifiers</span></li>
+              <li class="flex items-start gap-2"><span class="text-gold">✦</span> <span>Zero signup or phone number required</span></li>
+            </ul>
+          </div>
+          <a href="ask.html" class="w-full py-3 rounded-xl bg-void hover:bg-gold/15 border border-gold/30 text-center font-mono text-xs uppercase tracking-wider text-gold-light transition-all">
+            Ask Free Question Now ↑
+          </a>
+        </div>
+
+        <!-- Tier 2: ₹59 Single Question -->
+        <div class="obsidian-card rounded-3xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="font-mono text-[11px] uppercase tracking-widest text-ember-light mb-2">PAY AS YOU GO</div>
+            <h3 class="font-serif text-2xl text-white mb-4">Single Question</h3>
+            <div class="flex items-baseline gap-1 mb-5">
+              <span class="font-serif text-5xl text-white font-semibold">₹59</span>
+              <span class="font-mono text-xs text-ash">/ question</span>
+            </div>
+            <ul class="space-y-2.5 text-xs sm:text-sm text-ash-light mb-6">
+              <li class="flex items-start gap-2"><span class="text-ember-light">✦</span> <span>1 complete KP Horary chart + timing</span></li>
+              <li class="flex items-start gap-2"><span class="text-ember-light">✦</span> <span>Full verdict + plain-language reasoning</span></li>
+              <li class="flex items-start gap-2"><span class="text-ember-light">✦</span> <span>Save &amp; share your verdict card</span></li>
+              <li class="flex items-start gap-2"><span class="text-ember-light">✦</span> <span>No recurring subscription</span></li>
+            </ul>
+          </div>
+          <button type="button" data-plan="Single Question (₹59)" class="pricing-trigger-btn w-full py-3 rounded-xl bg-void hover:bg-ember/20 border border-ember/40 text-center font-mono text-xs uppercase tracking-wider text-ember-light transition-all cursor-pointer">
+            Unlock 1 Question · ₹59
+          </button>
+        </div>
+
+        <!-- Tier 3: ₹999/month Unlimited (Highlighted) -->
+        <div class="obsidian-card obsidian-card-active rounded-3xl p-6 flex flex-col justify-between relative">
+          <div class="absolute -top-3 right-5 px-3 py-0.5 rounded-full bg-gradient-to-r from-gold to-ember text-void font-mono text-[10px] font-bold uppercase tracking-widest">
+            MOST POPULAR
+          </div>
+          <div>
+            <div class="font-mono text-[11px] uppercase tracking-widest text-gold mb-2">UNLIMITED SEEKER PASS</div>
+            <h3 class="font-serif text-2xl text-white mb-4">Monthly Unlimited</h3>
+            <div class="flex items-baseline gap-1 mb-5">
+              <span class="font-serif text-5xl text-molten font-semibold">₹999</span>
+              <span class="font-mono text-xs text-ash">/ month</span>
+            </div>
+            <ul class="space-y-2.5 text-xs sm:text-sm text-gray-200 mb-6">
+              <li class="flex items-start gap-2"><span class="text-gold">✦</span> <span>Unlimited KP Yes/No Prashna castings</span></li>
+              <li class="flex items-start gap-2"><span class="text-gold">✦</span> <span>Priority always-warm engine (no 60s wait)</span></li>
+              <li class="flex items-start gap-2"><span class="text-gold">✦</span> <span>Full saved chart history &amp; date tracker</span></li>
+              <li class="flex items-start gap-2"><span class="text-gold">✦</span> <span>Cancel anytime in one click</span></li>
+            </ul>
+          </div>
+          <button type="button" data-plan="Monthly Unlimited Pass (₹999/mo)" class="pricing-trigger-btn btn-ignite w-full py-3 rounded-xl text-center font-mono text-xs uppercase tracking-wider cursor-pointer">
+            Start Unlimited · ₹999/mo
+          </button>
+        </div>
+
+        <!-- Tier 4: ₹499 Human Chat Session -->
+        <div class="obsidian-card rounded-3xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="font-mono text-[11px] uppercase tracking-widest text-gold-warm mb-2">HUMAN + MACHINE</div>
+            <h3 class="font-serif text-2xl text-white mb-4">1-on-1 KP Astrologer</h3>
+            <div class="flex items-baseline gap-1 mb-5">
+              <span class="font-serif text-5xl text-white font-semibold">₹499</span>
+              <span class="font-mono text-xs text-ash">/ chat session</span>
+            </div>
+            <ul class="space-y-2.5 text-xs sm:text-sm text-ash-light mb-6">
+              <li class="flex items-start gap-2"><span class="text-gold">✦</span> <span>Live 30-min chat with a senior KP practitioner</span></li>
+              <li class="flex items-start gap-2"><span class="text-gold">✦</span> <span>Multi-cusp cross-verification (Birth + Prashna)</span></li>
+              <li class="flex items-start gap-2"><span class="text-gold">✦</span> <span>Deep timing windows for exams, job switch, marriage</span></li>
+              <li class="flex items-start gap-2"><span class="text-gold">✦</span> <span>Zero superstitious upsells guaranteed</span></li>
+            </ul>
+          </div>
+          <button type="button" data-plan="1-on-1 Human KP Chat Session (₹499)" class="pricing-trigger-btn w-full py-3 rounded-xl bg-void hover:bg-gold/15 border border-gold/30 text-center font-mono text-xs uppercase tracking-wider text-gold-light transition-all cursor-pointer">
+            Book Human Session · ₹499
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         9. SHORT, NO-BS FAQ ACCORDION
+         =================================================================== -->
+    <section id="faq" class="max-w-4xl mx-auto px-4 sm:px-6 mt-28 sm:mt-36 scroll-mt-24">
+      <div class="text-center mb-12">
+        <div class="font-mono text-xs uppercase tracking-[0.2em] text-ember-light mb-2">
+          SKEPTICAL? GOOD.
+        </div>
+        <h2 class="font-serif text-3xl sm:text-5xl text-white font-normal">
+          Short, No-BS Answers.
+        </h2>
+      </div>
+
+      <div class="space-y-3" id="faq-accordion">
+        
+        <!-- FAQ 1 -->
+        <div class="obsidian-card rounded-2xl overflow-hidden">
+          <button type="button" class="faq-btn w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4">
+            <span class="font-serif text-xl sm:text-2xl text-white">How can this work without my birth date or birth time?</span>
+            <span class="faq-icon font-mono text-gold text-xl transition-transform">+</span>
+          </button>
+          <div class="faq-content hidden px-5 sm:px-6 pb-6 text-sm text-ash-light leading-relaxed border-t border-gold/10 pt-4">
+            In Indian astrology, <strong class="text-gold-light">Prashna Kundli (Horary Astrology)</strong> casts a chart for the birth of the <em>question itself</em> rather than the birth of the person. Perfected by Prof. K.S. Krishnamurti (KP System), the moment an urgent question arises in your mind, the number you intuitively choose (1–249) acts as the Ascendant seed, and the real planetary positions over your city at that exact second provide the answer. In fact, many KP practitioners prefer Prashna over birth charts because hospital birth times are often off by 5–10 minutes.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="obsidian-card rounded-2xl overflow-hidden">
+          <button type="button" class="faq-btn w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4">
+            <span class="font-serif text-xl sm:text-2xl text-white">What is the number between 1 and 249? Is it just random?</span>
+            <span class="faq-icon font-mono text-gold text-xl transition-transform">+</span>
+          </button>
+          <div class="faq-content hidden px-5 sm:px-6 pb-6 text-sm text-ash-light leading-relaxed border-t border-gold/10 pt-4">
+            The 360° zodiac has 12 signs and 27 Nakshatras (stars). When divided proportionally according to the 9 Vimshottari Dasha planets (Ketu 7 yrs, Venus 20 yrs, Sun 6 yrs, etc.), it creates exactly <strong class="text-gold-light">249 Sub-Lord arcs</strong>. Each number from 1 to 249 maps to a specific Sign Lord, Star Lord, and Sub Lord. In KP Horary, the Sub Lord of the 11th cusp (fulfillment of desire) decides whether your wish will materialize or hit obstacles.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="obsidian-card rounded-2xl overflow-hidden">
+          <button type="button" class="faq-btn w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4">
+            <span class="font-serif text-xl sm:text-2xl text-white">Why does the first question sometimes take ~60 seconds?</span>
+            <span class="faq-icon font-mono text-gold text-xl transition-transform">+</span>
+          </button>
+          <div class="faq-content hidden px-5 sm:px-6 pb-6 text-sm text-ash-light leading-relaxed border-t border-gold/10 pt-4">
+            Because we run a real Python astronomical engine that computes Swiss Ephemeris planetary longitudes and KP cuspal interlinks rather than spitting out instant generic AI fluff. When no one has asked a question in the last 15 minutes, the server enters cold-sleep and takes ~45–60 seconds to wake up. Once awake, subsequent questions resolve in seconds.
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="obsidian-card rounded-2xl overflow-hidden">
+          <button type="button" class="faq-btn w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4">
+            <span class="font-serif text-xl sm:text-2xl text-white">Is this just a ChatGPT wrapper making up astrology?</span>
+            <span class="faq-icon font-mono text-gold text-xl transition-transform">+</span>
+          </button>
+          <div class="faq-content hidden px-5 sm:px-6 pb-6 text-sm text-ash-light leading-relaxed border-t border-gold/10 pt-4">
+            <strong class="text-ember-light">No.</strong> Large language models are terrible at raw astronomical math — if you ask a generic LLM where Mars or the 11th KP cusp sub-lord is right now, it hallucinates. Astroman AI calculates the exact astronomical chart, cuspal sub-lords, and house significations deterministically first; language generation is only used at the final step to translate the strict mathematical verdict into clear, empathetic English.
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="obsidian-card rounded-2xl overflow-hidden">
+          <button type="button" class="faq-btn w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4">
+            <span class="font-serif text-xl sm:text-2xl text-white">Can I keep rolling numbers for the same question until I get a YES?</span>
+            <span class="faq-icon font-mono text-gold text-xl transition-transform">+</span>
+          </button>
+          <div class="faq-content hidden px-5 sm:px-6 pb-6 text-sm text-ash-light leading-relaxed border-t border-gold/10 pt-4">
+            In Prashna Shastra, the <em>first</em> chart cast when your question is genuine holds the truth. Re-asking the exact same question 5 times in 10 minutes because you didn't like the first verdict invalidates the horary principle. Ask once when your mind is focused, accept the mathematical signal, and act wisely.
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         10. FINAL DRAMATIC CTA SECTION
+         =================================================================== -->
+    <section class="max-w-4xl mx-auto px-4 sm:px-6 mt-28 sm:mt-36 text-center">
+      <div class="obsidian-card obsidian-card-active rounded-3xl p-8 sm:p-14 relative overflow-hidden">
+        <div class="font-mono text-xs uppercase tracking-[0.25em] text-gold mb-3">
+          SHIV TANDAV · ENERGY INTO CLARITY
+        </div>
+        <h2 class="font-serif text-4xl sm:text-6xl text-white font-normal leading-tight mb-4">
+          Stand before the dark.<br />
+          <span class="italic text-molten">Ask what you truly want to know.</span>
+        </h2>
+        <p class="text-sm sm:text-base text-ash-light max-w-xl mx-auto mb-8">
+          One question. One number between 1 and 249. Your current city. Let the mathematics of the moment cut through the overthinking.
+        </p>
+        <button 
+          id="final-cta-scroll-btn" 
+          type="button"
+          class="btn-ignite px-8 py-4 rounded-2xl text-base sm:text-lg font-sans inline-flex items-center gap-3 cursor-pointer"
+        >
+          <span>Return to the Oracle — Ask Free</span>
+          <span>↑</span>
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =====================================================================
+       FOOTER
+       ===================================================================== -->
+  <footer class="relative z-10 border-t border-gold/10 py-10 px-4 sm:px-6 bg-void/90">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-ash">
+      <div class="flex items-center gap-3">
+        <span class="w-2 h-2 rounded-full bg-gold"></span>
+        <span class="text-gold-light">ASTROMAN AI</span>
+        <span>·</span>
+        <span>SHIV TANDAV EDITION (ENERGY MADE VISIBLE)</span>
+      </div>
+      <div>
+        KP PRASHNA KUNDLI ENGINE · 249 SUB-LORD SYSTEM · RADICALLY HONEST
+      </div>
+    </div>
+  </footer>
+
+  <!-- =====================================================================
+       HONEST PRICING / CHECKOUT MODAL (NO FAKE DARK PATTERNS)
+       ===================================================================== -->
+  <div id="pricing-modal" role="dialog" aria-modal="true" aria-labelledby="modal-plan-title" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/80 backdrop-blur-md">
+    <div class="obsidian-card obsidian-card-active max-w-md w-full rounded-3xl p-6 sm:p-8 relative">
+      <button id="close-modal-btn" type="button" aria-label="Close" class="absolute top-5 right-5 text-ash hover:text-white font-mono text-sm">✕</button>
+      
+      <div class="font-mono text-[11px] uppercase tracking-widest text-ember-light mb-2">
+        EARLY TESTING
+      </div>
+      <h3 id="modal-plan-title" class="font-serif text-3xl text-white mb-3">
+        Single Question (₹59)
+      </h3>
+      <p id="modal-plan-body" class="text-sm text-ash-light leading-relaxed mb-6">
+        Payments aren't live yet — we're still testing the engine. Your first 5 questions are free, no payment needed.
+      </p>
+
+      <button id="modal-use-free-btn" type="button" class="btn-ignite w-full py-3.5 rounded-xl font-sans text-sm cursor-pointer">
+        Ask a Free Question →
+      </button>
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       PLAIN JAVASCRIPT:
+       1. REAL KP 249 SUB-LORD MATHEMATICAL ENGINE
+       2. 60FPS SHIV TANDAV GENERATIVE PARTICLE & GEOMETRY CANVAS
+       3. LIVE API INTEGRATION + COLD-START RITUAL + SINGULARITY REVEAL
+       ===================================================================== -->
+  <script>
+    (function () {
+      'use strict';
+
+      /* ===================================================================
+         PART 1: REAL KP 249 SUB-LORD MATHEMATICAL CALCULATOR
+         Generates the authentic 249 Krishnamurti Paddhati divisions across
+         the 12 Zodiac Signs, 27 Nakshatras, and 9 Vimshottari Lords.
+         =================================================================== */
+      const ZODIAC_SIGNS = [
+        { name: 'Aries', short: 'ARI', lord: 'MAR' },
+        { name: 'Taurus', short: 'TAU', lord: 'VEN' },
+        { name: 'Gemini', short: 'GEM', lord: 'MER' },
+        { name: 'Cancer', short: 'CAN', lord: 'MOO' },
+        { name: 'Leo', short: 'LEO', lord: 'SUN' },
+        { name: 'Virgo', short: 'VIR', lord: 'MER' },
+        { name: 'Libra', short: 'LIB', lord: 'VEN' },
+        { name: 'Scorpio', short: 'SCO', lord: 'MAR' },
+        { name: 'Sagittarius', short: 'SAG', lord: 'JUP' },
+        { name: 'Capricorn', short: 'CAP', lord: 'SAT' },
+        { name: 'Aquarius', short: 'AQU', lord: 'SAT' },
+        { name: 'Pisces', short: 'PIS', lord: 'JUP' }
+      ];
+
+      const VIMSHOTTARI_LORDS = [
+        { lord: 'KET', full: 'Ketu', years: 7 },
+        { lord: 'VEN', full: 'Venus', years: 20 },
+        { lord: 'SUN', full: 'Sun', years: 6 },
+        { lord: 'MOO', full: 'Moon', years: 10 },
+        { lord: 'MAR', full: 'Mars', years: 7 },
+        { lord: 'RAH', full: 'Rahu', years: 18 },
+        { lord: 'JUP', full: 'Jupiter', years: 16 },
+        { lord: 'SAT', full: 'Saturn', years: 19 },
+        { lord: 'MER', full: 'Mercury', years: 17 }
+      ];
+
+      const NAKSHATRA_NAMES = [
+        'Ashwini', 'Bharani', 'Krittika', 'Rohini', 'Mrigashira', 'Ardra',
+        'Punarvasu', 'Pushya', 'Ashlesha', 'Magha', 'Purva Phalguni', 'Uttara Phalguni',
+        'Hasta', 'Chitra', 'Swati', 'Vishakha', 'Anuradha', 'Jyeshtha',
+        'Mula', 'Purva Ashadha', 'Uttara Ashadha', 'Shravana', 'Dhanishta', 'Shatabhisha',
+        'Purva Bhadrapada', 'Uttara Bhadrapada', 'Revati'
+      ];
+
+      // Build the exact 249 KP Sub-Lord table
+      const KP_249_TABLE = [];
+      (function buildKP249Table() {
+        const starSpan = 360 / 27; // 13.3333333333° per Nakshatra
+        let currentDeg = 0;
+        let seedNumber = 1;
+
+        for (let starIdx = 0; starIdx < 27; starIdx++) {
+          const starLordIdx = starIdx % 9;
+          const starLordObj = VIMSHOTTARI_LORDS[starLordIdx];
+          const nakshatraName = NAKSHATRA_NAMES[starIdx];
+
+          for (let subOffset = 0; subOffset < 9; subOffset++) {
+            const subLordObj = VIMSHOTTARI_LORDS[(starLordIdx + subOffset) % 9];
+            const subSpan = starSpan * (subLordObj.years / 120);
+            const startDeg = currentDeg;
+            const endDeg = currentDeg + subSpan;
+
+            const startSignIdx = Math.floor((startDeg + 1e-7) / 30);
+            const endSignIdx = Math.floor((endDeg - 1e-7) / 30);
+
+            // If a sub-lord arc crosses a 30° sign boundary (and isn't tiny rounding), KP splits it into 2 numbers (hence 243 + 6 = 249!)
+            if (startSignIdx !== endSignIdx && Math.abs(endDeg - endSignIdx * 30) > 1e-5 && Math.abs(endSignIdx * 30 - startDeg) > 1e-5) {
+              const boundaryDeg = endSignIdx * 30;
+              // First part in startSign
+              KP_249_TABLE.push(createSubEntry(seedNumber++, startDeg, boundaryDeg, startSignIdx, nakshatraName, starLordObj.lord, subLordObj.lord));
+              // Second part in endSign
+              KP_249_TABLE.push(createSubEntry(seedNumber++, boundaryDeg, endDeg, endSignIdx, nakshatraName, starLordObj.lord, subLordObj.lord));
+            } else {
+              KP_249_TABLE.push(createSubEntry(seedNumber++, startDeg, endDeg, startSignIdx, nakshatraName, starLordObj.lord, subLordObj.lord));
+            }
+
+            currentDeg = endDeg;
+          }
+        }
+      })();
+
+      function formatDMS(degInSign) {
+        const d = Math.floor(degInSign + 1e-7);
+        const remMin = (degInSign - d) * 60;
+        const m = Math.floor(remMin + 1e-7);
+        const s = Math.round((remMin - m) * 60);
+        const pad = (n) => String(Math.max(0, n)).padStart(2, '0');
+        return `${pad(d)}°${pad(m)}'${pad(s === 60 ? 59 : s)}"`;
+      }
+
+      function createSubEntry(num, startDeg, endDeg, signIdx, nakshatra, starLord, subLord) {
+        const safeSignIdx = Math.min(11, Math.max(0, signIdx));
+        const sign = ZODIAC_SIGNS[safeSignIdx];
+        const degInSign = startDeg - safeSignIdx * 30;
+        return {
+          seed: num,
+          startDeg,
+          endDeg,
+          signName: sign.name,
+          signShort: sign.short,
+          signLord: sign.lord,
+          nakshatra,
+          starLord,
+          subLord,
+          dms: formatDMS(degInSign),
+          fullCoord: `${sign.name} ${formatDMS(degInSign)}`
+        };
+      }
+
+      function getKPSeedData(seedNum) {
+        const clamped = Math.min(249, Math.max(1, parseInt(seedNum, 10) || 42));
+        return KP_249_TABLE[clamped - 1] || KP_249_TABLE[41];
+      }
+
+      /* ===================================================================
+         PART 2: SHIV TANDAV GENERATIVE CANVAS ENGINE (60FPS)
+         States:
+         - 'FLOW'       : Cosmic Dance (700+ particles in curl-like harmonic flow)
+         - 'RESONANCE'  : Pulse & orbital ring rotation when typing or changing seed
+         - 'CONSULTING' : High-velocity vortex spiral + planetary harmonic chords
+         - 'COALESCE'   : Collapse to golden singularity point -> shockwave -> calm crystal lattice
+         =================================================================== */
+      const canvas = document.getElementById('tandav-canvas');
+      const ctx = canvas.getContext('2d');
+
+      let width = window.innerWidth;
+      let height = window.innerHeight;
+      let dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+      // Engine State
+      const EngineVisual = {
+        mode: 'FLOW', // 'FLOW' | 'CONSULTING' | 'COALESCE' | 'STILLNESS'
+        paused: (typeof matchMedia === 'function' && matchMedia('(prefers-reduced-motion: reduce)').matches),
+        targetAngleDeg: (42 / 249) * 360,
+        currentAngleDeg: (42 / 249) * 360,
+        resonanceEnergy: 0,
+        coalesceTimer: 0,
+        shockwaveRadius: 0,
+        shockwaveAlpha: 0,
+        mouseX: width * 0.5,
+        mouseY: height * 0.38,
+        targetMouseX: width * 0.5,
+        targetMouseY: height * 0.38,
+        ripples: []
+      };
+
+      const PARTICLE_COUNT = window.innerWidth < 768 ? 420 : 760;
+      const particles = [];
+
+      function resizeCanvas() {
+        width = window.innerWidth;
+        height = window.innerHeight;
+        dpr = Math.min(window.devicePixelRatio || 1, 2);
+        canvas.width = width * dpr;
+        canvas.height = height * dpr;
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      }
+
+      window.addEventListener('resize', resizeCanvas);
+      resizeCanvas();
+
+      // Create Particle
+      function createParticle(index) {
+        const angle = (index / PARTICLE_COUNT) * Math.PI * 2 * 13;
+        const radius = 30 + Math.random() * Math.max(width, height) * 0.62;
+        const cx = width * 0.5;
+        const cy = height * 0.38;
+        const isEmber = Math.random() < 0.32;
+        const isBrightGold = Math.random() < 0.22;
+
+        return {
+          x: cx + Math.cos(angle) * radius,
+          y: cy + Math.sin(angle) * radius,
+          px: cx + Math.cos(angle) * radius,
+          py: cy + Math.sin(angle) * radius,
+          vx: 0,
+          vy: 0,
+          baseRadius: radius,
+          orbitAngle: angle,
+          orbitSpeed: (0.0012 + Math.random() * 0.0032) * (Math.random() < 0.15 ? -1 : 1),
+          size: isBrightGold ? 1.9 + Math.random() * 1.4 : 0.8 + Math.random() * 1.3,
+          color: isEmber ? '#FF5E1A' : (isBrightGold ? '#FFF4DC' : '#F0D9A8'),
+          alpha: 0.25 + Math.random() * 0.65,
+          latticeX: (Math.random() - 0.5) * width * 1.1,
+          latticeY: (Math.random() - 0.5) * height * 1.1,
+          seedOffset: Math.random() * 100
+        };
+      }
+
+      for (let i = 0; i < PARTICLE_COUNT; i++) {
+        particles.push(createParticle(i));
+      }
+
+      // Trigger visual energy ripple
+      function spawnEnergyRipple(x, y, color = '#F0D9A8', maxR = 260) {
+        EngineVisual.ripples.push({
+          x: x || width * 0.5,
+          y: y || height * 0.42,
+          r: 8,
+          maxR,
+          alpha: 0.55,
+          color
+        });
+        EngineVisual.resonanceEnergy = Math.min(1.5, EngineVisual.resonanceEnergy + 0.45);
+      }
+
+      // Mouse Tracking
+      window.addEventListener('mousemove', (e) => {
+        EngineVisual.targetMouseX = e.clientX;
+        EngineVisual.targetMouseY = e.clientY;
+      });
+
+      // Pseudo Curl-Noise field function using trigonometric harmonics (fast 60fps in plain JS)
+      function getFlowVector(x, y, t, cx, cy) {
+        const dx = x - cx;
+        const dy = y - cy;
+        const dist = Math.sqrt(dx * dx + dy * dy) + 0.001;
+        // Tangential orbital component + mathematical curl perturbation
+        const nx = dx * 0.0022;
+        const ny = dy * 0.0022;
+        const wave1 = Math.sin(nx * 2.1 + t * 0.7) * Math.cos(ny * 1.9 - t * 0.5);
+        const wave2 = Math.cos(nx * 1.3 - ny * 1.7 + t * 0.4);
+
+        // Tangential swirl vector
+        const tx = -dy / dist;
+        const ty = dx / dist;
+
+        // Radial breathing pull
+        const targetBand = 220 + Math.sin(t * 0.5 + wave1 * 2) * 95;
+        const radialForce = (targetBand - dist) * 0.0018;
+        const rx = (dx / dist) * radialForce;
+        const ry = (dy / dist) * radialForce;
+
+        return {
+          fx: tx * (1.25 + wave1 * 0.75) + rx + wave2 * 0.35,
+          fy: ty * (1.25 + wave1 * 0.75) + ry + Math.sin(nx + ny + t) * 0.35
+        };
+      }
+
+      // Draw Sacred 249-Division Mathematical Ring
+      function drawSacredGeometry(cx, cy, time) {
+        ctx.save();
+        ctx.translate(cx, cy);
+
+        // Smoothly interpolate wheel rotation toward selected Horary Seed degree
+        EngineVisual.currentAngleDeg += (EngineVisual.targetAngleDeg - EngineVisual.currentAngleDeg) * 0.07;
+        const rotRad = (EngineVisual.currentAngleDeg * Math.PI) / 180 + time * 0.025;
+        ctx.rotate(rotRad);
+
+        const baseRingR = Math.min(width, height) * 0.38;
+        const ringAlpha = EngineVisual.mode === 'CONSULTING' ? 0.26 : (EngineVisual.mode === 'STILLNESS' ? 0.14 : 0.12 + EngineVisual.resonanceEnergy * 0.1);
+
+        // Outer 249 Sub-Lord Tick Marks
+        ctx.strokeStyle = `rgba(240, 217, 168, ${ringAlpha})`;
+        ctx.lineWidth = 0.8;
+        ctx.beginPath();
+        for (let i = 0; i < 249; i++) {
+          const a = (i / 249) * Math.PI * 2;
+          const isMajor = i % 21 === 0;
+          const innerR = baseRingR - (isMajor ? 12 : 5);
+          const outerR = baseRingR + (isMajor ? 6 : 0);
+          ctx.moveTo(Math.cos(a) * innerR, Math.sin(a) * innerR);
+          ctx.lineTo(Math.cos(a) * outerR, Math.sin(a) * outerR);
+        }
+        ctx.stroke();
+
+        // Inner Zodiacal 12-Cusp Ring
+        const innerCuspR = baseRingR * 0.72;
+        ctx.strokeStyle = `rgba(255, 94, 26, ${ringAlpha * 0.75})`;
+        ctx.lineWidth = 0.7;
+        ctx.beginPath();
+        ctx.arc(0, 0, innerCuspR, 0, Math.PI * 2);
+        ctx.stroke();
+
+        // During CONSULTING state, draw harmonic planetary chords across the ring
+        if (EngineVisual.mode === 'CONSULTING') {
+          ctx.strokeStyle = 'rgba(240, 217, 168, 0.16)';
+          ctx.lineWidth = 0.75;
+          ctx.beginPath();
+          for (let i = 0; i < 7; i++) {
+            const a1 = time * (0.6 + i * 0.12) + i * 1.1;
+            const a2 = a1 + 2.35 + Math.sin(time + i) * 0.5;
+            ctx.moveTo(Math.cos(a1) * innerCuspR, Math.sin(a1) * innerCuspR);
+            ctx.lineTo(Math.cos(a2) * innerCuspR, Math.sin(a2) * innerCuspR);
+          }
+          ctx.stroke();
+        }
+
+        ctx.restore();
+      }
+
+      let lastTime = performance.now();
+      let elapsedTime = 0;
+
+      function animateTandav(now) {
+        requestAnimationFrame(animateTandav);
+        if (EngineVisual.paused) return;
+
+        const dt = Math.min(0.05, (now - lastTime) * 0.001);
+        lastTime = now;
+        elapsedTime += dt;
+
+        // Smooth mouse interpolation
+        EngineVisual.mouseX += (EngineVisual.targetMouseX - EngineVisual.mouseX) * 0.06;
+        EngineVisual.mouseY += (EngineVisual.targetMouseY - EngineVisual.mouseY) * 0.06;
+        EngineVisual.resonanceEnergy *= 0.95;
+
+        const cx = width * 0.5 + (EngineVisual.mouseX - width * 0.5) * 0.06;
+        const cy = height * 0.38 + (EngineVisual.mouseY - height * 0.38) * 0.06;
+
+        // Long-exposure fire trail clearing
+        const trailFade = EngineVisual.mode === 'CONSULTING' ? 0.16 : (EngineVisual.mode === 'STILLNESS' ? 0.28 : 0.14);
+        ctx.fillStyle = `rgba(10, 7, 5, ${trailFade})`;
+        ctx.fillRect(0, 0, width, height);
+
+        // Draw Sacred 249 Geometry Wheel
+        drawSacredGeometry(cx, cy, elapsedTime);
+
+        // Draw Expanding Energy Ripples
+        for (let i = EngineVisual.ripples.length - 1; i >= 0; i--) {
+          const rp = EngineVisual.ripples[i];
+          rp.r += (rp.maxR - rp.r) * 0.08 + 2.2;
+          rp.alpha *= 0.93;
+          ctx.strokeStyle = rp.color === '#FF5E1A'
+            ? `rgba(255, 94, 26, ${rp.alpha})`
+            : `rgba(240, 217, 168, ${rp.alpha})`;
+          ctx.lineWidth = 1.4;
+          ctx.beginPath();
+          ctx.arc(rp.x, rp.y, rp.r, 0, Math.PI * 2);
+          ctx.stroke();
+          if (rp.alpha < 0.015) {
+            EngineVisual.ripples.splice(i, 1);
+          }
+        }
+
+        // Handle COALESCE Singularity Shockwave
+        if (EngineVisual.mode === 'COALESCE') {
+          EngineVisual.coalesceTimer += dt;
+          // Draw central blazing point of light
+          const coreGlow = ctx.createRadialGradient(cx, cy, 1, cx, cy, 95);
+          coreGlow.addColorStop(0, 'rgba(255, 252, 242, 0.98)');
+          coreGlow.addColorStop(0.25, 'rgba(240, 217, 168, 0.65)');
+          coreGlow.addColorStop(0.6, 'rgba(255, 94, 26, 0.22)');
+          coreGlow.addColorStop(1, 'rgba(10, 7, 5, 0)');
+          ctx.fillStyle = coreGlow;
+          ctx.beginPath();
+          ctx.arc(cx, cy, 95, 0, Math.PI * 2);
+          ctx.fill();
+
+          if (EngineVisual.coalesceTimer > 0.85) {
+            // Transition into calm STILLNESS lattice + trigger shockwave
+            EngineVisual.mode = 'STILLNESS';
+            EngineVisual.shockwaveRadius = 10;
+            EngineVisual.shockwaveAlpha = 0.85;
+            updateStateReadout('VERDICT STILLNESS (ORDER)');
+          }
+        }
+
+        if (EngineVisual.shockwaveAlpha > 0.01) {
+          EngineVisual.shockwaveRadius += 18;
+          EngineVisual.shockwaveAlpha *= 0.93;
+          ctx.strokeStyle = `rgba(240, 217, 168, ${EngineVisual.shockwaveAlpha})`;
+          ctx.lineWidth = 2.2;
+          ctx.beginPath();
+          ctx.arc(cx, cy, EngineVisual.shockwaveRadius, 0, Math.PI * 2);
+          ctx.stroke();
+        }
+
+        // Update and Render Particles
+        ctx.lineCap = 'round';
+        for (let i = 0; i < particles.length; i++) {
+          const p = particles[i];
+          p.px = p.x;
+          p.py = p.y;
+
+          if (EngineVisual.mode === 'FLOW') {
+            const speedBoost = 1 + EngineVisual.resonanceEnergy * 1.9;
+            const flow = getFlowVector(p.x, p.y, elapsedTime, cx, cy);
+            p.vx = p.vx * 0.88 + flow.fx * 0.42 * speedBoost;
+            p.vy = p.vy * 0.88 + flow.fy * 0.42 * speedBoost;
+            p.x += p.vx;
+            p.y += p.vy;
+          } else if (EngineVisual.mode === 'CONSULTING') {
+            // High-velocity Tandav Vortex spiraling inward and around the Oracle Core
+            const dx = p.x - cx;
+            const dy = p.y - cy;
+            const dist = Math.sqrt(dx * dx + dy * dy) + 0.1;
+            const targetOrbit = 45 + (i % 7) * 28;
+            const tx = -dy / dist;
+            const ty = dx / dist;
+            const pull = (targetOrbit - dist) * 0.035;
+            p.vx = p.vx * 0.82 + (tx * 6.8 + (dx / dist) * pull);
+            p.vy = p.vy * 0.82 + (ty * 6.8 + (dy / dist) * pull);
+            p.x += p.vx;
+            p.y += p.vy;
+          } else if (EngineVisual.mode === 'COALESCE') {
+            // Rapid convergence into the single point of light
+            p.vx = (cx - p.x) * 0.22;
+            p.vy = (cy - p.y) * 0.22;
+            p.x += p.vx;
+            p.y += p.vy;
+          } else if (EngineVisual.mode === 'STILLNESS') {
+            // Calm, crystal-clear geometric starfield so user reads verdict in peace
+            const targetX = cx + p.latticeX;
+            const targetY = cy + p.latticeY + Math.sin(elapsedTime * 0.8 + p.seedOffset) * 2.5;
+            p.vx = (targetX - p.x) * 0.06;
+            p.vy = (targetY - p.y) * 0.06;
+            p.x += p.vx;
+            p.y += p.vy;
+          }
+
+          // Wrap out-of-bounds particles smoothly in FLOW state
+          if (EngineVisual.mode === 'FLOW') {
+            const margin = 120;
+            if (p.x < -margin || p.x > width + margin || p.y < -margin || p.y > height + margin) {
+              const angle = Math.random() * Math.PI * 2;
+              const r = 60 + Math.random() * Math.min(width, height) * 0.45;
+              p.x = cx + Math.cos(angle) * r;
+              p.y = cy + Math.sin(angle) * r;
+              p.px = p.x;
+              p.py = p.y;
+            }
+          }
+
+          // Draw particle light-stream stroke
+          ctx.strokeStyle = p.color;
+          ctx.globalAlpha = EngineVisual.mode === 'STILLNESS' ? p.alpha * 0.65 : p.alpha;
+          ctx.lineWidth = p.size;
+          ctx.beginPath();
+          ctx.moveTo(p.px, p.py);
+          ctx.lineTo(p.x, p.y);
+          ctx.stroke();
+        }
+        ctx.globalAlpha = 1;
+      }
+
+      /* ===================================================================
+         PART 3: UI STATE, TELEMETRY, FREE QUOTA & INTERACTIVE CONTROLS
+         =================================================================== */
+      const stateReadoutEl = document.getElementById('canvas-state-readout');
+      const stateDotEl = document.getElementById('state-indicator-dot');
+      const heroDegreeReadoutEl = document.getElementById('hero-degree-readout');
+
+
+      // Live IST / UTC Ephemeris Clock
+      const clockEl = document.getElementById('live-ephemeris-clock');
+      function updateEphemerisClock() {
+        const now = new Date();
+        const istOffsetMs = 5.5 * 60 * 60 * 1000;
+        const istDate = new Date(now.getTime() + istOffsetMs);
+        const istStr = istDate.toISOString().replace('T', ' ').substring(0, 19);
+        clockEl.textContent = `IST ${istStr} · NIRAYANA KP`;
+      }
+      setInterval(updateEphemerisClock, 1000);
+      updateEphemerisClock();
+
+      // Free Question Quota (localStorage)
+      const QUOTA_KEY = 'astroman_free_questions_used_v1';
+      const freeQuotaLabel = document.getElementById('free-quota-label');
+      const quotaDot = document.getElementById('quota-dot');
+
+      // In-memory fallback if localStorage is blocked (private mode, in-app browsers)
+      let memQuota = 0;
+      function storageGet(key) {
+        try { return localStorage.getItem(key); }
+        catch (e) { return key === QUOTA_KEY ? String(memQuota) : null; }
+      }
+      function storageSet(key, val) {
+        try { localStorage.setItem(key, val); }
+        catch (e) { if (key === QUOTA_KEY) memQuota = parseInt(val, 10) || 0; }
+      }
+
+      function getFreeUsed() {
+        return parseInt(storageGet(QUOTA_KEY) || '0', 10) || 0;
+      }
+
+      function setFreeUsed(val) {
+        storageSet(QUOTA_KEY, String(Math.max(0, val)));
+        updateQuotaUI();
+      }
+
+      // Quota: 5 free questions per browser. Payments not live yet — no paywall, honest message instead.
+      const FREE_QUOTA_LIMIT = 5;
+      const PAYMENTS_LIVE = false;
+      function updateQuotaUI() {
+        const used = getFreeUsed();
+        const remaining = Math.max(0, FREE_QUOTA_LIMIT - used);
+        freeQuotaLabel.textContent = `${remaining} of 5 Free Left`;
+        if (remaining === 0) {
+          quotaDot.className = 'w-2 h-2 rounded-full bg-ember shadow-[0_0_8px_#FF5E1A]';
+        } else {
+          quotaDot.className = 'w-2 h-2 rounded-full bg-gold shadow-[0_0_8px_#F0D9A8]';
+        }
+      }
+      updateQuotaUI();
+
+      function updateStateReadout(label, isEmber = false) {
+        stateReadoutEl.textContent = label;
+        stateDotEl.className = isEmber
+          ? 'w-2 h-2 rounded-full bg-ember animate-ping'
+          : 'w-2 h-2 rounded-full bg-gold';
+      }
+
+      // Pause / Resume Motion Button
+      const toggleMotionBtn = document.getElementById('toggle-motion-btn');
+      toggleMotionBtn.addEventListener('click', () => {
+        EngineVisual.paused = !EngineVisual.paused;
+        toggleMotionBtn.textContent = EngineVisual.paused ? 'Resume Motion' : 'Pause Motion';
+      });
+
+      /* ===================================================================
+         PART 5: INTERACTIVE SAMPLE VERDICTS SHOWCASE (4 DOMAINS)
+         =================================================================== */
+      const SAMPLE_READINGS = {
+        exam: {
+          seed: 108,
+          city: 'Delhi',
+          meta: 'SEED #108 · DELHI · VIRGO 02°40\'00" (MER–SUN–VEN)',
+          rule: 'KP RULE: CUSPS 4, 9, 11 EXAMINED',
+          question: 'Will I clear NEET PG on this attempt?',
+          verdict: 'YES — with delays',
+          badgeClass: 'verdict-badge-delay',
+          narration:
+            'Your chart shows strong competitive success, so the answer is YES — you have the planetary backing to secure a seat. However, Saturn\'s aspect on the 9th cusp sub-lord indicates the first counseling round may stall or leave you waitlisted. Your breakthrough arrives in the second/mop-up window between late August and mid-September. Don\'t drop heart after Round 1.',
+          modifiers: [
+            '11th Sub-Lord: Venus (Fruitful 4, 9, 11)',
+            'Saturn Aspect → Round 1 Delay',
+            'Breakthrough Window: Counseling Round 2',
+            'Nirayana Ascendant: Virgo 02°40\''
+          ]
+        },
+        career: {
+          seed: 37,
+          city: 'Bengaluru',
+          meta: 'SEED #037 · BENGALURU · TAURUS 21°20\'00" (VEN–MOO–VEN)',
+          rule: 'KP RULE: CUSPS 2, 6, 10, 11 EXAMINED',
+          question: 'Will I get the backend developer offer at the Bangalore startup?',
+          verdict: 'YES',
+          badgeClass: 'verdict-badge-yes',
+          narration:
+            'A textbook affirmative KP Horary chart. With Seed #037 placing Taurus on the ascendant and Venus as the 11th Cusp Sub-Lord in the star of Moon, houses 2 (compensation), 6 (employer selection), and 11 (desire fulfillment) are locked in direct signification without retrograde affliction. Expect the written offer within 9 to 14 days.',
+          modifiers: [
+            '11th Sub-Lord: Venus (Direct Significator)',
+            'Zero Retrograde Obstruction',
+            'Offer Window: 9–14 Days',
+            'Strong Salary Negotiation Cusp (2 & 11)'
+          ]
+        },
+        love: {
+          seed: 194,
+          city: 'Chandigarh',
+          meta: 'SEED #194 · CHANDIGARH · CAPRICORN 09°06\'40" (SAT–SUN–SAT)',
+          rule: 'KP RULE: CUSPS 5, 7, 11 EXAMINED',
+          question: 'Will my family agree to our marriage this year?',
+          verdict: 'YES — with delays',
+          badgeClass: 'verdict-badge-delay',
+          narration:
+            'The 7th and 11th house connections confirm that the marriage itself is promised in the chart — your families will eventually consent. However, because Saturn is the Sub-Lord in a fiery Sun nakshatra, ego clashes from an elder family member will create resistance for the next 3 to 4 months. Patience and steady mediation after November unlock family approval.',
+          modifiers: [
+            'Marriage Promised: Houses 5, 7, 11 Active',
+            'Saturn Sub-Lord → Elder Resistance',
+            'Resolution Window: Post-November Bhukti',
+            'Avoid Ultimatums This Month'
+          ]
+        },
+        money: {
+          seed: 221,
+          city: 'Mumbai',
+          meta: 'SEED #221 · MUMBAI · AQUARIUS 16°53\'20" (SAT–RAH–KET)',
+          rule: 'KP RULE: CUSPS 2, 5, 8, 12 EXAMINED',
+          question: 'Should I put my savings into this new F&O trading course/scheme right now?',
+          verdict: 'NO',
+          badgeClass: 'verdict-badge-no',
+          narration:
+            'The Oracle returns a sharp NO. Seed #221 places Ketu as the Sub-Lord in the star of Rahu, strongly activating houses 5, 8, and 12 — the KP combination for sudden speculative drawdown and hidden misrepresentation. Keeping your capital liquid right now protects you from an avoidable loss.',
+          modifiers: [
+            'Sub-Lord Ketu Signifies 8 & 12 (Loss)',
+            'Rahu Star → Inflated Promises',
+            'Speculative Cusp Negated',
+            'Capital Protection Advised'
+          ]
+        }
+      };
+
+      let currentSampleKey = 'exam';
+      const sampleTabBtns = document.querySelectorAll('.sample-tab-btn');
+
+      function renderSampleShowcase(key) {
+        currentSampleKey = key;
+        const item = SAMPLE_READINGS[key];
+        if (!item) return;
+
+        document.getElementById('sample-cast-meta').textContent = item.meta;
+        document.getElementById('sample-house-rule').textContent = item.rule;
+        document.getElementById('sample-q-title').textContent = `"${item.question}"`;
+
+        const vBox = document.getElementById('sample-verdict-box');
+        vBox.className = `${item.badgeClass} rounded-2xl p-5 text-center transition-all`;
+        document.getElementById('sample-verdict-title').textContent = item.verdict;
+        document.getElementById('sample-narration-body').textContent = item.narration;
+
+        const modWrap = document.getElementById('sample-modifiers-wrap');
+        modWrap.innerHTML = '';
+        item.modifiers.forEach((m) => {
+          const span = document.createElement('span');
+          span.className = 'px-3 py-1 rounded-lg bg-obsidian border border-gold/20 font-mono text-xs text-gold-light';
+          span.textContent = m;
+          modWrap.appendChild(span);
+        });
+      }
+
+      sampleTabBtns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const key = btn.getAttribute('data-sample-tab');
+          sampleTabBtns.forEach((b) => {
+            b.className = 'sample-tab-btn px-5 py-2.5 rounded-full font-mono text-xs uppercase tracking-wider bg-obsidian text-ash-light hover:text-gold-light border border-gold/20 transition-all';
+          });
+          btn.className = 'sample-tab-btn px-5 py-2.5 rounded-full font-mono text-xs uppercase tracking-wider bg-gold text-void font-semibold shadow-[0_0_20px_rgba(240,217,168,0.4)] transition-all';
+          renderSampleShowcase(key);
+          spawnEnergyRipple(width * 0.5, height * 0.6, '#F0D9A8', 220);
+        });
+      });
+
+      renderSampleShowcase('exam');
+
+      document.getElementById('load-sample-into-oracle-btn').addEventListener('click', () => {
+        const item = SAMPLE_READINGS[currentSampleKey];
+        if (!item) return;
+        const params = new URLSearchParams({ q: item.question, seed: String(item.seed || 42), city: item.city || '' });
+        window.location.href = 'ask.html?' + params.toString();
+      });
+
+      /* ===================================================================
+         PART 6: INTERACTIVE 1-249 SUB-LORD TABLE INSPECTOR + FAQ + MODAL
+         =================================================================== */
+      const toggleMathBtn = document.getElementById('toggle-math-inspector-btn');
+      const mathDrawer = document.getElementById('math-inspector-drawer');
+      const mathArrow = document.getElementById('math-inspector-arrow');
+      const sublordTableContainer = document.getElementById('sublord-table-container');
+      let tablePopulated = false;
+
+      toggleMathBtn.addEventListener('click', () => {
+        const isHidden = mathDrawer.classList.contains('hidden');
+        if (isHidden) {
+          mathDrawer.classList.remove('hidden');
+          mathArrow.textContent = '▾';
+          if (!tablePopulated) {
+            populateSubLordTable();
+            tablePopulated = true;
+          }
+        } else {
+          mathDrawer.classList.add('hidden');
+          mathArrow.textContent = '▸';
+        }
+      });
+
+      function populateSubLordTable() {
+        const frag = document.createDocumentFragment();
+        KP_249_TABLE.forEach((row) => {
+          const div = document.createElement('div');
+          div.className = 'py-2 px-2 hover:bg-gold/10 flex flex-wrap items-center justify-between gap-2 cursor-pointer transition-colors';
+          div.innerHTML = `
+            <span class="text-gold-light font-semibold">SEED #${String(row.seed).padStart(3, '0')}</span>
+            <span class="text-white">${row.fullCoord}</span>
+            <span class="text-ash">${row.nakshatra}</span>
+            <span class="text-ember-light">${row.signLord} – ${row.starLord} – ${row.subLord}</span>
+          `;
+          div.addEventListener('click', () => {
+            // View-only: rows teach the 249 divisions but never pre-pick a seed (no cherry-picking)
+            window.location.href = 'ask.html';
+          });
+          frag.appendChild(div);
+        });
+        sublordTableContainer.appendChild(frag);
+      }
+
+      // FAQ Accordion
+      document.querySelectorAll('.faq-btn').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const content = btn.nextElementSibling;
+          const icon = btn.querySelector('.faq-icon');
+          const isOpen = !content.classList.contains('hidden');
+
+          document.querySelectorAll('.faq-content').forEach((el) => el.classList.add('hidden'));
+          document.querySelectorAll('.faq-icon').forEach((ic) => (ic.textContent = '+'));
+
+          if (!isOpen) {
+            content.classList.remove('hidden');
+            icon.textContent = '−';
+          }
+        });
+      });
+
+      // Pricing Modal
+      const pricingModal = document.getElementById('pricing-modal');
+      const modalPlanTitle = document.getElementById('modal-plan-title');
+      const modalPlanBody = document.getElementById('modal-plan-body');
+
+      function openPricingModal(planTitle) {
+        modalPlanTitle.textContent = planTitle;
+        if (planTitle.indexOf('Human') !== -1) {
+          modalPlanBody.textContent = "Human sessions aren't open yet — we're testing the engine first. Your first 5 questions are free, and we'll announce human sessions when they're ready.";
+        } else {
+          modalPlanBody.textContent = "Payments aren't live yet — we're still testing the engine. Your first 5 questions are free, no payment needed.";
+        }
+        pricingModal.classList.remove('hidden');
+        pricingModal.classList.add('flex');
+      }
+
+      function closePricingModal() {
+        pricingModal.classList.add('hidden');
+        pricingModal.classList.remove('flex');
+      }
+
+      document.querySelectorAll('.pricing-trigger-btn').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          openPricingModal(btn.getAttribute('data-plan'));
+        });
+      });
+
+      document.getElementById('close-modal-btn').addEventListener('click', closePricingModal);
+      pricingModal.addEventListener('click', (e) => {
+        if (e.target === pricingModal) closePricingModal();
+      });
+
+      document.getElementById('modal-use-free-btn').addEventListener('click', () => {
+        closePricingModal();
+        window.location.href = 'ask.html';
+      });
+
+      // Final CTA Scroll Button
+      document.getElementById('final-cta-scroll-btn').addEventListener('click', () => {
+        window.location.href = 'ask.html';
+      });
+
+      // Initialize Seed #42 and Start Animation Loop immediately (no onload flash)
+      EngineVisual.targetAngleDeg = (42 / 249) * 360;
+      EngineVisual.angleDeg = (42 / 249) * 360;
+      (function(){ const k = getKPSeedData(42); if (heroDegreeReadoutEl) heroDegreeReadoutEl.textContent = `${k.dms} ${k.signName.toUpperCase()} (${k.signLord}\u2013${k.starLord}\u2013${k.subLord})`; })();
+      animateTandav(performance.now());
+    })();
+  </script>
+<script>
+/* Luna's darkness-to-light: brighten page as user scrolls toward the ask */
+(function(){var r=document.documentElement;
+function upd(){var h=document.body.scrollHeight-innerHeight;var p=h>0?scrollY/h:0;
+r.style.setProperty('--dawn',Math.min(1,p*1.4).toFixed(3));}
+addEventListener('scroll',upd,{passive:true});upd();})();
+</script>
+<script>
+      // Web Audio: singing-bowl bell on verdict, tick on seed lock (toggleable)
+      let audioCtx = null, soundOn = true;
+      function ensureAudio() {
+        if (!audioCtx) { try { audioCtx = new (window.AudioContext || window.webkitAudioContext)(); } catch (e) {} }
+        if (audioCtx && audioCtx.state === 'suspended') audioCtx.resume();
+      }
+      function playBell() {
+        if (!soundOn) return; ensureAudio(); if (!audioCtx) return;
+        const t = audioCtx.currentTime;
+        [523.25, 784.31, 1046.5].forEach((f, i) => {
+          const o = audioCtx.createOscillator(), g = audioCtx.createGain();
+          o.type = 'sine'; o.frequency.value = f;
+          g.gain.setValueAtTime(0, t + i * 0.12);
+          g.gain.linearRampToValueAtTime(0.08 / (i + 1), t + i * 0.12 + 0.03);
+          g.gain.exponentialRampToValueAtTime(0.0001, t + 2.5);
+          o.connect(g); g.connect(audioCtx.destination);
+          o.start(t + i * 0.12); o.stop(t + 2.6);
+        });
+      }
+      function playTick() {
+        if (!soundOn) return; ensureAudio(); if (!audioCtx) return;
+        const t = audioCtx.currentTime;
+        const o = audioCtx.createOscillator(), g = audioCtx.createGain();
+        o.type = 'triangle'; o.frequency.value = 1567.98;
+        g.gain.setValueAtTime(0.05, t);
+        g.gain.exponentialRampToValueAtTime(0.0001, t + 0.18);
+        o.connect(g); g.connect(audioCtx.destination);
+        o.start(t); o.stop(t + 0.2);
+      }
+</script>
+<script>
+document.getElementById('sound-toggle').addEventListener('click', function() {
+  soundOn = !soundOn;
+  this.textContent = soundOn ? '🔔' : '🔕';
+  if (soundOn) playTick();
+});
+</script>
+</body>
+</html>
