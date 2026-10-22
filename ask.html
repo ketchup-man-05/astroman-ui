@@ -947,6 +947,23 @@ background:radial-gradient(ellipse 80% 50% at 50% 100%,rgba(240,217,168,.07),tra
               </div>
             </div>
 
+            <!-- Follow-Up entry: opens the chat screen for THIS reading -->
+            <div class="pt-2">
+              <div class="font-mono text-[10px] uppercase tracking-widest text-ash mb-2.5">
+                Questions About This Verdict?
+              </div>
+              <p class="text-xs sm:text-sm text-ash-light leading-relaxed mb-3">
+                Continue in chat — same reading, no new chart, and follow-ups don't use up a free question.
+              </p>
+              <button
+                id="open-chat-btn"
+                type="button"
+                class="btn-ignite w-full sm:w-auto px-6 py-3.5 rounded-xl text-xs sm:text-sm font-mono uppercase tracking-wider cursor-pointer"
+              >
+                Ask a Follow-Up →
+              </button>
+            </div>
+
             <!-- Action Footer -->
             <div class="pt-4 border-t border-gold/15 flex flex-wrap items-center justify-between gap-3">
               <button 
@@ -954,7 +971,7 @@ background:radial-gradient(ellipse 80% 50% at 50% 100%,rgba(240,217,168,.07),tra
                 type="button"
                 class="btn-ignite px-5 py-3 rounded-xl text-xs sm:text-sm font-mono uppercase tracking-wider cursor-pointer"
               >
-                + Ask Follow-Up Question
+                + Ask a New Question
               </button>
 
               <div class="flex flex-wrap items-center gap-2.5 px-1">
@@ -986,6 +1003,78 @@ background:radial-gradient(ellipse 80% 50% at 50% 100%,rgba(240,217,168,.07),tra
               </div>
             </div>
 
+          </div>
+
+          <!-- =============================================================
+               VIEW 4: FOLLOW-UP CHAT (same reading — explains the verdict,
+               never a new chart; powered by POST /followup)
+               ============================================================= -->
+          <div id="chat-view" class="hidden space-y-5">
+            <div class="flex items-center justify-between gap-3">
+              <button
+                id="chat-back-btn"
+                type="button"
+                class="px-4 py-2.5 rounded-xl bg-void hover:bg-gold/15 border border-gold/25 text-xs font-mono text-gold-light transition-all cursor-pointer"
+              >
+                ← Back to Reading
+              </button>
+              <span class="font-mono text-[10px] uppercase tracking-widest text-ash">Follow-Up Chat</span>
+            </div>
+
+            <!-- Pinned reading summary -->
+            <div class="rounded-2xl p-4 sm:p-5 bg-void/85 border border-gold/25">
+              <div class="font-mono text-[10px] uppercase tracking-widest text-ash mb-1.5">Your Reading</div>
+              <div id="chat-question-echo" class="font-serif text-lg sm:text-xl text-white italic mb-2.5"></div>
+              <span id="chat-verdict-badge" class="inline-block px-3 py-1 rounded-full border font-mono text-xs font-semibold"></span>
+              <button
+                id="chat-reading-toggle"
+                type="button"
+                class="block mt-3 font-mono text-[11px] text-gold-light hover:text-gold transition-colors cursor-pointer"
+              >
+                Show the full reading ▾
+              </button>
+              <div id="chat-reading-body" class="hidden mt-3 space-y-3">
+                <p id="chat-narration-text" class="text-sm text-gray-200 leading-relaxed whitespace-pre-line"></p>
+                <p id="chat-timing-text" class="text-sm text-ash-light leading-relaxed whitespace-pre-line"></p>
+              </div>
+            </div>
+
+            <!-- Conversation thread -->
+            <div id="chat-thread" class="space-y-3"></div>
+            <div id="chat-empty-hint" class="rounded-2xl p-4 bg-void/60 border border-gold/15 text-sm text-ash-light leading-relaxed">
+              Ask me anything about this reading — why this verdict, what the timing means, what to keep in mind. If you type a brand-new question here, I'll honestly tell you it needs its own chart.
+            </div>
+
+            <!-- Composer -->
+            <form id="chat-form" class="flex flex-col sm:flex-row gap-2.5 sticky bottom-3 p-2.5 rounded-2xl bg-void/90 backdrop-blur border border-gold/20">
+              <input
+                id="chat-input"
+                type="text"
+                maxlength="300"
+                autocomplete="off"
+                placeholder="Ask about this reading…"
+                class="tandav-input flex-1 rounded-2xl px-4 py-3.5 text-sm sm:text-base font-sans placeholder:text-ash/50"
+              >
+              <button
+                id="chat-send-btn"
+                type="submit"
+                class="btn-ignite px-6 py-3.5 rounded-xl text-xs sm:text-sm font-mono uppercase tracking-wider cursor-pointer"
+              >
+                Ask
+              </button>
+            </form>
+            <div id="chat-status" class="hidden font-mono text-[11px] text-ash"></div>
+
+            <div class="pt-1 flex items-center justify-between gap-3">
+              <span class="font-mono text-[10px] uppercase tracking-wider text-ash">Follow-ups don't use a free question</span>
+              <button
+                id="chat-new-question-btn"
+                type="button"
+                class="px-4 py-2.5 rounded-xl bg-void hover:bg-ember/20 border border-ember/30 text-xs font-mono text-ember-light transition-all cursor-pointer shrink-0"
+              >
+                + Ask a New Question
+              </button>
+            </div>
           </div>
 
         </div>
@@ -1677,7 +1766,7 @@ background:radial-gradient(ellipse 80% 50% at 50% 100%,rgba(240,217,168,.07),tra
       });
       // Reset lock when user starts a new question
       // Note: editing the question no longer unlocks a locked seed (typo fixes are safe).
-      // A fresh seed comes only from "+ Ask Follow-Up Question" (ask-another-btn).
+      // A fresh seed comes only from "+ Ask a New Question" (ask-another-btn).
 
       // Smart warm-up: ping sleeping Render server on first keystroke (non-blocking)
       let warmedUp = false;
@@ -1747,6 +1836,7 @@ background:radial-gradient(ellipse 80% 50% at 50% 100%,rgba(240,217,168,.07),tra
       let revealTimer = null;
       let currentSessionQuery = null;
       const sessionHistory = [];
+      let currentFollowupItem = null; // the reading the follow-up box is attached to
 
       document.getElementById('close-error-btn').addEventListener('click', () => {
         formErrorBanner.classList.add('hidden');
@@ -2007,15 +2097,19 @@ background:radial-gradient(ellipse 80% 50% at 50% 100%,rgba(240,217,168,.07),tra
         });
 
         // 4. Add to Session Chat-Style History Thread
-        sessionHistory.push({
+        const historyItem = {
           question: qObj.question,
           city: qObj.city,
           seed: qObj.horaryNumber,
           verdict: rawVerdict,
           narration: rawNarration,
           modifiers: finalModifiers,
-          castAt
-        });
+          castAt,
+          timing: (apiData.result && apiData.result.timing && apiData.result.timing.phrasing) || '',
+          followups: []
+        };
+        sessionHistory.push(historyItem);
+        setFollowupItem(historyItem);
         renderSessionHistory();
 
         // 5. Reveal Verdict View
@@ -2078,6 +2172,8 @@ background:radial-gradient(ellipse 80% 50% at 50% 100%,rgba(240,217,168,.07),tra
         const padSeed = String(item.seed).padStart(3, '0');
         // Restore session query so Save Card (PNG) exports the right question
         currentSessionQuery = { question: item.question, city: item.city, horaryNumber: item.seed, kp };
+        // The follow-up box follows the re-opened reading (restores its thread)
+        setFollowupItem(item);
         document.getElementById('verdict-meta-badge').textContent =
           `CAST AT ${String(item.castAt).toUpperCase()} · SEED #${padSeed} · ${item.city.toUpperCase()}`;
         document.getElementById('verdict-source-tag').textContent = 'SESSION HISTORY';
@@ -2118,6 +2214,157 @@ background:radial-gradient(ellipse 80% 50% at 50% 100%,rgba(240,217,168,.07),tra
       document.getElementById('clear-history-btn').addEventListener('click', () => {
         sessionHistory.length = 0;
         renderSessionHistory();
+      });
+
+      // Follow-Up Chat Screen (same reading — explains the verdict, never a new chart)
+      const chatView = document.getElementById('chat-view');
+
+      function setFollowupItem(item) {
+        currentFollowupItem = item;
+        if (item && !Array.isArray(item.followups)) item.followups = [];
+        const inp = document.getElementById('chat-input');
+        if (inp) inp.value = '';
+        const st = document.getElementById('chat-status');
+        if (st) { st.classList.add('hidden'); st.textContent = ''; }
+        renderChatThread();
+      }
+
+      function followupBubble(label, labelClass, text) {
+        const wrap = document.createElement('div');
+        wrap.className = 'rounded-2xl p-3.5 sm:p-4 bg-void/85 border border-gold/15';
+        const lab = document.createElement('div');
+        lab.className = `font-mono text-[10px] uppercase tracking-widest mb-1.5 ${labelClass}`;
+        lab.textContent = label;
+        const body = document.createElement('div');
+        body.className = 'text-sm text-gray-200 leading-relaxed whitespace-pre-line';
+        body.textContent = text;
+        wrap.appendChild(lab); wrap.appendChild(body);
+        return wrap;
+      }
+
+      function renderChatThread() {
+        const thread = document.getElementById('chat-thread');
+        if (!thread) return;
+        thread.innerHTML = '';
+        const hint = document.getElementById('chat-empty-hint');
+        const fus = (currentFollowupItem && currentFollowupItem.followups) || [];
+        if (hint) hint.classList.toggle('hidden', fus.length > 0);
+        fus.forEach((fu) => {
+          thread.appendChild(followupBubble('You asked', 'text-ash', fu.q));
+          thread.appendChild(followupBubble('Astroman', 'text-gold-light', fu.a));
+        });
+      }
+
+      function updateChatPinned() {
+        if (!currentFollowupItem) return;
+        const item = currentFollowupItem;
+        document.getElementById('chat-question-echo').textContent = `\u201C${item.question}\u201D`;
+        const badge = document.getElementById('chat-verdict-badge');
+        badge.textContent = item.verdict;
+        const isNo = /^NO\b/i.test(item.verdict.trim());
+        badge.className = 'inline-block px-3 py-1 rounded-full border font-mono text-xs font-semibold ' +
+          (isNo ? 'text-ember-light border-ember/40 bg-ember/10' : 'text-gold-light border-gold/40 bg-gold/10');
+        document.getElementById('chat-narration-text').textContent = item.narration || '';
+        const timingEl = document.getElementById('chat-timing-text');
+        timingEl.textContent = item.timing || '';
+        timingEl.classList.toggle('hidden', !item.timing);
+        // Reset the full-reading expander each time the chat opens
+        document.getElementById('chat-reading-body').classList.add('hidden');
+        document.getElementById('chat-reading-toggle').textContent = 'Show the full reading \u25BE';
+      }
+
+      function openChat() {
+        if (!currentFollowupItem) return;
+        updateChatPinned();
+        renderChatThread();
+        verdictView.classList.add('hidden');
+        chatView.classList.remove('hidden');
+        chatView.scrollIntoView({ behavior: 'smooth' });
+        const inp = document.getElementById('chat-input');
+        if (inp) inp.focus();
+      }
+
+      function closeChat() {
+        chatView.classList.add('hidden');
+        verdictView.classList.remove('hidden');
+        verdictView.scrollIntoView({ behavior: 'smooth' });
+      }
+
+      document.getElementById('open-chat-btn').addEventListener('click', openChat);
+      document.getElementById('chat-back-btn').addEventListener('click', closeChat);
+      document.getElementById('chat-reading-toggle').addEventListener('click', () => {
+        const body = document.getElementById('chat-reading-body');
+        const toggle = document.getElementById('chat-reading-toggle');
+        const nowHidden = body.classList.toggle('hidden');
+        toggle.textContent = nowHidden ? 'Show the full reading \u25BE' : 'Hide the full reading \u25B4';
+      });
+      document.getElementById('chat-new-question-btn').addEventListener('click', () => {
+        chatView.classList.add('hidden');
+        // Reuse the verdict screen's own new-question flow (reset seed + form)
+        document.getElementById('ask-another-btn').click();
+      });
+
+      let followupInFlight = false;
+      document.getElementById('chat-form').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        if (followupInFlight || !currentFollowupItem) return;
+        const input = document.getElementById('chat-input');
+        const status = document.getElementById('chat-status');
+        const sendBtn = document.getElementById('chat-send-btn');
+        const text = input.value.trim();
+        if (text.length < 3) {
+          status.textContent = 'Type a follow-up about this reading first.';
+          status.classList.remove('hidden');
+          return;
+        }
+        followupInFlight = true;
+        sendBtn.disabled = true;
+        sendBtn.textContent = 'Asking\u2026';
+        status.textContent = 'Reading your verdict again\u2026';
+        status.classList.remove('hidden');
+        const hint = document.getElementById('chat-empty-hint');
+        if (hint) hint.classList.add('hidden');
+        // Show the user's question immediately, with a waiting bubble for the answer
+        const thread = document.getElementById('chat-thread');
+        const userBubble = followupBubble('You asked', 'text-ash', text);
+        const waitBubble = followupBubble('Astroman', 'text-gold-light', '\u2026');
+        thread.appendChild(userBubble);
+        thread.appendChild(waitBubble);
+        waitBubble.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        try {
+          const resp = await fetch('https://astroman-api.onrender.com/followup', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              question: currentFollowupItem.question,
+              verdict: currentFollowupItem.verdict,
+              narration: currentFollowupItem.narration,
+              timing: currentFollowupItem.timing || '',
+              followup: text
+            })
+          });
+          const data = await resp.json().catch(() => null);
+          if (data && data.available && data.answer) {
+            currentFollowupItem.followups.push({ q: text, a: String(data.answer) });
+            input.value = '';
+            status.classList.add('hidden');
+            renderChatThread();
+            const last = thread.lastElementChild;
+            if (last) last.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          } else {
+            userBubble.remove(); waitBubble.remove();
+            renderChatThread();
+            status.textContent = 'Follow-up answers are not available right now \u2014 your reading above still stands. Please try again in a little while.';
+          }
+        } catch (err) {
+          userBubble.remove(); waitBubble.remove();
+          renderChatThread();
+          status.textContent = 'Could not reach the reader just now \u2014 please try again in a moment.';
+        } finally {
+          followupInFlight = false;
+          sendBtn.disabled = false;
+          sendBtn.textContent = 'Ask';
+        }
       });
 
       // Form Submit Handler
